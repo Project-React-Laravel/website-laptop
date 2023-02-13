@@ -5,10 +5,10 @@ import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles)
 
-function CicleCate() {
+function CicleCate({children}) {
     return (  
         <div className={cx('circle')}>
-            <FontAwesomeIcon icon={faGamepad} className={cx('icon-circle')}/>
+            <FontAwesomeIcon icon={children} className={cx('icon-circle')}/>
         </div>);
 }
 
