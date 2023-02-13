@@ -5,6 +5,7 @@ import img2 from '../assets/image/banner-2.jpg';
 import img3 from '../assets/image/banner-3.jpg';
 import Service from './Service';
 import CicleCate from './CircleCate';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 
 const cx = classNames.bind(styles)
@@ -29,24 +30,34 @@ function Home() {
                     <Service />
                 </div>
             </div>
-                <div className={cx('wrapper')}>
-                    <h1 style={{
+            <div className={cx('wrapper')}>
+                <h1 style={{
                             fontSize:'30px',
                             fontWeight:'600',
                             color:'#1d1d1d',
                             lineHeight:'36px'
                     }}>
                     Category 
-                    </h1>
-                    <div className={cx('cate-container')}>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                    </div>
+                </h1>
+                <div className={cx('cate-container')}>
+                    <div className={cx('cate-item')}><CicleCate /><p>Laptop Gaming</p></div>
+                    <div className={cx('cate-item')}><CicleCate icon={faGraduationCap} /><p>Laptop Sinh Viên</p></div>
+                    <div className={cx('cate-item')}><CicleCate /><p>Laptop Đồ Họa</p></div>
+                    <div className={cx('cate-item')}><CicleCate /><p>Laptop Doanh Nhân</p></div>
+                    <div className={cx('cate-item')}><CicleCate /><p>Laptop Mỏng Nhẹ</p></div>
                 </div>
             </div>
+            <div className={cx('wrapper')}>
+                <h1 style={{
+                            fontSize:'30px',
+                            fontWeight:'600',
+                            color:'#1d1d1d',
+                            lineHeight:'36px'
+                    }}>
+                    Category 
+                </h1>
+            </div>
+        </div>
     );
 }
 
