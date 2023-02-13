@@ -5,6 +5,8 @@ import img2 from '../assets/image/banner-2.jpg';
 import img3 from '../assets/image/banner-3.jpg';
 import Service from './Service';
 import CicleCate from './CircleCate';
+import Selling from './Selling';
+import { faGamepad, faGraduationCap, faLaptop, faPenRuler } from '@fortawesome/free-solid-svg-icons';
 
 
 const cx = classNames.bind(styles)
@@ -40,11 +42,27 @@ function Home() {
                     Category 
                     </h1>
                     <div className={cx('cate-container')}>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
-                        <div><CicleCate /><p>Laptop Gaming</p></div>
+                        <div><CateIcon>{faGamepad}</CateIcon><p>Laptop Gaming</p></div>
+                        <div><CateIcon>{faGraduationCap}</CateIcon><p>Laptop Gaming</p></div>
+                        <div><CateIcon>{faPenRuler}</CateIcon><p>Laptop Gaming</p></div>
+                        <div><CateIcon>{faLaptop}</CateIcon><p>Laptop Gaming</p></div>
+                        <div><CateIcon>{faGamepad}</CateIcon><p>Laptop Gaming</p></div>
+                    </div>
+                </div>
+                <div className={cx('wrapper')}>
+                    <h1 style={{
+                            fontSize:'30px',
+                            fontWeight:'600',
+                            color:'#1d1d1d',
+                            lineHeight:'36px'
+                    }}>
+                    Category 
+                    </h1>
+                    <div className={cx('selling-container')}>
+                        <Selling/>
+                        <Selling/>
+                        <Selling/>
+                        <Selling/>
                     </div>
                 </div>
             </div>
