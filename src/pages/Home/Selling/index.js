@@ -24,7 +24,7 @@ function Selling({children}) {
                 <h1 style={{fontSize:'18px'}}>Laptop Asus Vivobook A1503ZA-L1139W i5</h1>
                 <p>Senmei ipsum dolore eiusmod dolor officia do nisi</p>
                 <span style={{fontSize:'18px',fontWeight:'600',color:'#ef262c'}}>$27</span>
-                <Button variant="contained" color="primary" sx={{backgroundColor:'#ffbb38',width:'110px',height:'30px'}}>
+                <Button variant="contained" color="primary" sx={{backgroundColor:'#ffbb38',width:'110px',height:'30px',marginTop:'10px'}}>
                     Add To Cart
                 </Button>
             </Box>

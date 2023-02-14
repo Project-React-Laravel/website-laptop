@@ -3,9 +3,11 @@ import classNames from 'classnames/bind';
 import img from '../assets/image/banner-1.png';
 import img2 from '../assets/image/banner-2.jpg';
 import img3 from '../assets/image/banner-3.jpg';
+import img4 from './Selling/laptop.png'
 import Service from './Service';
 import CicleCate from './CircleCate';
 import Selling from './Selling';
+import Product from './Product';
 import { faGamepad, faGraduationCap, faLaptop, faPenRuler } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -49,6 +51,21 @@ function Home() {
                         <div><CateIcon>{faGamepad}</CateIcon><p>Laptop Gaming</p></div>
                     </div>
                 </div>
+            <div className={cx('wrapper')}>
+                    <h1 style={{
+                            fontSize:'30px',
+                            fontWeight:'600',
+                            color:'#1d1d1d',
+                            lineHeight:'36px'
+                    }}>
+                    Selling Product
+                    </h1>
+                <div className={cx('selling-container')}>
+                    <Selling/>
+                    <Selling/>
+                    <Selling/>
+                    <Selling/>
+                </div>
                 <div className={cx('wrapper')}>
                     <h1 style={{
                             fontSize:'30px',
@@ -56,15 +73,16 @@ function Home() {
                             color:'#1d1d1d',
                             lineHeight:'36px'
                     }}>
-                    Category 
+                    Popular Product
                     </h1>
-                    <div className={cx('selling-container')}>
-                        <Selling/>
-                        <Selling/>
-                        <Selling/>
-                        <Selling/>
+                    <div className={cx('popular-container')}>
+                        <Product>{img4}</Product>
+                        <Product>{img4}</Product>
+                        <Product>{img4}</Product>
+                        <Product>{img4}</Product>
                     </div>
                 </div>
+            </div>
             </div>
     );
 }

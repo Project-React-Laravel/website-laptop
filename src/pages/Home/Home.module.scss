@@ -92,20 +92,24 @@
     background-color: #f8f8f8;
     display: flex;
     align-items: center;
-}
-.circle:hover{
-    background-color: #2d6f6d;
-}
-.circle:hover .icon-circle{
-    color: #ffffff;
-}
-.icon-circle{
-    width: 47px;
-    height: 47px;
-    margin: 0 auto;
+    &:hover{
+        background-color: #2d6f6d;
+        .icon-circle{
+            color: #ffffff;
+        }
+    }
+    .icon-circle{
+        width: 47px;
+        height: 47px;
+        margin: 0 auto;
+    }
 }
 .selling-container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.popular-container{
+    display: flex;
+    justify-content: space-between;
 }
