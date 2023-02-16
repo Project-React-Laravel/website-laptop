@@ -29,8 +29,12 @@ function Home() {
                         <img src={images.bannerLeft} alt='Banner' className={cx('banner-img-left')}></img>
                     </div>
                     <div className={cx('container-img-right')}>
-                        <img src={images.bannerRight1} alt='Banner' className={cx('banner-img-right')}></img>
-                        <img src={images.bannerRight2} alt='Banner' className={cx('banner-img-right')}></img>
+                        <div className={cx('img-right')}>
+                            <img src={images.bannerRight1} alt='Banner' className={cx('banner-img-right')}></img>
+                        </div>
+                        <div className={cx('img-right')}>
+                            <img src={images.bannerRight2} alt='Banner' className={cx('banner-img-right')}></img>
+                        </div>
                     </div>
                 </div>
                 <div className={cx('service-container')}>
