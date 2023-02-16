@@ -1,0 +1,24 @@
+.filter-group{
+    line-height: 24px;
+    width: 210px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+.list-filter{
+    list-style-type: none;
+    width: 100%;
+    margin: 30px 0px;
+}
+.item-filter{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.button-filter{
+    width: 100%;
+    min-height: 70px;
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
