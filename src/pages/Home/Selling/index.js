@@ -1,11 +1,10 @@
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Box from '@mui/material/Box'
-import img from './laptop.png';
 import Button from '@mui/material/Button'
-import images from '@/pages/assets/image';
+import images from '@/pages/assets/image'
 
-function Selling({children}) {
+function Selling({image}) {
     return (  
         <Card style={{
             display:'flex',
@@ -17,7 +16,7 @@ function Selling({children}) {
             }}>
             <CardMedia 
             title="" 
-            image={images.laptop}
+            image={image}
             component="img"
             sx={{ width: 255 , height: 190 }} 
             />
@@ -32,5 +31,4 @@ function Selling({children}) {
         </Card>
     );
 }
-
 export default Selling;

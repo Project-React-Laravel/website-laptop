@@ -1,7 +1,6 @@
 import styles from './Home.module.scss'
 import classNames from 'classnames/bind';
 import images from '../assets/image';
-import img4 from './Selling/laptop.png'
 import Service from './Service';
 import CicleCate from './CircleCate';
 import Selling from './Selling';
@@ -68,10 +67,10 @@ function Home() {
                     Selling Product
                     </h1>
             <div className={cx('selling-container')}>
-                <Selling/>
-                <Selling/>
-                <Selling/>
-                <Selling/>
+                <Selling image={images.laptop} />
+                <Selling image={images.laptop2} />
+                <Selling image={images.laptop3} />
+                <Selling image={images.laptop4} />
             </div>
                 <div className={cx('wrapper')}>
                     <h1 style={{
@@ -84,9 +83,9 @@ function Home() {
                     </h1>
                     <div className={cx('popular-container')}>
                         <Product>{images.laptop}</Product>
-                        <Product>{images.laptop}</Product>
-                        <Product>{images.laptop}</Product>
-                        <Product>{images.laptop}</Product>
+                        <Product>{images.laptop2}</Product>
+                        <Product>{images.laptop3}</Product>
+                        <Product>{images.laptop4}</Product>
                     </div>
                 </div>
             </div>
