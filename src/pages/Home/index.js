@@ -1,8 +1,6 @@
 import styles from './Home.module.scss'
 import classNames from 'classnames/bind';
-import img from '../assets/image/banner-1.png';
-import img2 from '../assets/image/banner-2.jpg';
-import img3 from '../assets/image/banner-3.jpg';
+import images from '../assets/image';
 import img4 from './Selling/laptop.png'
 import Service from './Service';
 import CicleCate from './CircleCate';
@@ -29,11 +27,11 @@ function Home() {
             <div className={cx('banner')}>
                 <div className={cx('banner-card')}>
                     <div className={cx('container-img-left')}>
-                        <img src={img} alt='Banner' className={cx('banner-img-left')}></img>
+                        <img src={images.bannerLeft} alt='Banner' className={cx('banner-img-left')}></img>
                     </div>
                     <div className={cx('container-img-right')}>
-                        <img src={img2} alt='Banner' className={cx('banner-img-right')}></img>
-                        <img src={img3} alt='Banner' className={cx('banner-img-right')}></img>
+                        <img src={images.bannerRight1} alt='Banner' className={cx('banner-img-right')}></img>
+                        <img src={images.bannerRight2} alt='Banner' className={cx('banner-img-right')}></img>
                     </div>
                 </div>
                 <div className={cx('service-container')}>
@@ -85,10 +83,10 @@ function Home() {
                     Popular Product
                     </h1>
                     <div className={cx('popular-container')}>
-                        <Product>{img4}</Product>
-                        <Product>{img4}</Product>
-                        <Product>{img4}</Product>
-                        <Product>{img4}</Product>
+                        <Product>{images.laptop}</Product>
+                        <Product>{images.laptop}</Product>
+                        <Product>{images.laptop}</Product>
+                        <Product>{images.laptop}</Product>
                     </div>
                 </div>
             </div>
