@@ -97,8 +97,6 @@ function Home() {
                     }
                 }) 
     },[])
-
-
     //API Product
     const [products,setProducts] = useState([]);
     useEffect(()=>{

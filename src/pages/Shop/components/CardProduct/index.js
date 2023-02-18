@@ -1,15 +1,14 @@
 import classNames from 'classnames/bind';
 import * as React from 'react';
 import styles from './CardProduct.module.scss'
-import img from '../Selling/laptop.png';
 
 const cx = classNames.bind(styles);
 
-function Card({name, des, price}) {
+function Card({name, des, price, image}) {
     return ( 
         <div className={cx('item-card')}>
                 <div className={cx('product-image')}>
-                    <img src={img} alt='Banner' className={cx('image')}/>
+                    <img src={image} alt='Banner' className={cx('image')}/>
                 </div>
                 <div className={cx('product-info')}>
                     <h2 className={cx('product-name')}>{name}</h2>
