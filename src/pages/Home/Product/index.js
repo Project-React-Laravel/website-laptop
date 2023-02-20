@@ -1,7 +1,6 @@
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Box from '@mui/material/Box'
-import img from '../Selling/laptop.png';
 import ButtonCart from '../ButtonCart';
 
 function Product({children}) {
@@ -28,7 +27,6 @@ function Product({children}) {
         </Box>
         <ButtonCart />
         </Card>
-        
      </div>   
     );
 }

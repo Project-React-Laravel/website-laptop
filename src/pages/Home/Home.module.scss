@@ -1,4 +1,5 @@
-.wrapper{
+.wrapper,
+.wrapper-full{
     width: 1168px;
     height: 100%;
     margin: 30px auto;
@@ -18,14 +19,65 @@
 .container-img-left{
     width: 740px;
     height: 100%;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    --transition-duration: 500ms;
+    --transition-easing: ease-out;
+    &:hover{
+        &::before {
+            left: 150%;
+        }
+    }
+    &::before {
+    content: '';
+    background: rgba(white, 0.4);
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: -125%;
+    
+    transform: skew(45deg);
+    transition: left 
+    var(--transition-duration)
+    var(--transition-easing);
+    position: absolute;
+}
 }
 .container-img-right{
     width: 398px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     line-height: 24px;
-    margin:  0px 0px 0px 30px;
+    margin:  0px 0px 0px 30px;   
+}
+.img-right{
+    width: 398px;
+    height: 290px;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    --transition-duration: 500ms;
+    --transition-easing: ease-out;
+    &:hover{
+        &::before {
+            left: 150%;
+        }
+    }
+    &::before {
+    content: '';
+    background: rgba(white, 0.4);
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: -125%;
+    
+    transform: skew(45deg);
+    transition: left 
+    var(--transition-duration)
+    var(--transition-easing);
+    position: absolute;
+}
 }
 
 .banner-img-left{
@@ -35,7 +87,7 @@
 .banner-img-right{
     margin: 0px 0px 30px;
     width: 100%;
-    height: 285px;
+    height: 287px;
 }
 .service-container{
     width: 1168px;
