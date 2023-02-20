@@ -212,7 +212,7 @@
 }
 //Show home
 .Header_full_bottom_show_home
-{
+{   z-index: 10;    
     display: none;
     left: 433px;
     position: absolute;
@@ -281,6 +281,7 @@ text-decoration: underline;}
 //show page
 .Header_full_bottom_show_page
 {
+    z-index: 10;
     display: none;
     left: 660px;
     position: absolute;
@@ -336,7 +337,7 @@ text-decoration: underline;}
 //show shop
 .Header_full_bottom_show_shop
 {
-    
+    z-index: 10;
     animation: infinite;
     animation: headernotifiled ease 0.3s;
     box-shadow: rgb(0 0 0 / 10%) 0px 13px 13px 13px;
@@ -403,7 +404,7 @@ text-decoration: underline;}
     position: absolute;
     width: 270px;
     height: 900px;
-    
+    z-index: 10;
 }
 
 .Header_full_bottom_menu ul li
