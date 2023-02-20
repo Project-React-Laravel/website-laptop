@@ -74,6 +74,7 @@
     background-color: #ffbb38;
     border: 0;
     width: 158px;
+    cursor: pointer;
 }
 .Footer_Full_Bottom
 {
@@ -83,7 +84,7 @@
 }
 .Footer_Full_Bottom_content
 {
-    background-color: #daddde;
+    
     margin: auto;
     width: 1189px;
     padding: 56px 24px 0 24px;
@@ -95,6 +96,7 @@
     text-align: center;
     margin-bottom: 50px;
     border-bottom-style: ridge;
+    border-color:white; 
 }
 .Footer_Full_Bottom_content_2
 {
@@ -106,7 +108,7 @@
 {
     width: 424px;
     height: 100%;
-    background-color: aquamarine;
+    
 }
 .Footer_Full_Bottom_content_2_1 h1
 {
@@ -116,12 +118,97 @@
 }
 .Footer_Full_Bottom_content_2_1 p
 {
+    color: #b9b7b4;
     font-size: 15px;
     margin-right: 100px;
 }
 .Footer_Full_Bottom_content_2_2
 {
-    width: 744px;
+    
     height: 100%;
-    background-color: #ffbb38;
+
 }
+.Footer_Full_Bottom_content_2_2_1 div ul
+{
+    list-style: none;
+}
+.Footer_Full_Bottom_content_2_2_1
+{
+    width: 248px;
+}
+.Footer_Full_Bottom_content_2_2_1_header
+{
+    margin-bottom: 20px;
+}
+.Footer_Full_Bottom_content_2_2_1_header h1
+{
+ font-size: 16px;
+}
+.Footer_Full_Bottom_content_2_2_1_content ul li
+{
+    margin-top: 8px;
+}
+.Footer_Full_Bottom_content_2_2_1_content ul li a
+{
+    text-decoration: none;
+    color: #b9b7b4;
+    font-size: 14px;
+}
+.Footer_Full_Bottom_content_2_2_1_content ul li a:hover
+{
+    text-decoration: underline;
+    color: black;
+}
+.Footer_Contact_main
+{
+    background-color: white;
+}
+.Footer_Contact
+{
+    width: 1168px;
+    height: 82px;
+    margin: auto;
+    
+    border-color: #ffffff;
+    border-top-style: ridge;
+   
+}
+.Footer_Contact
+{
+    display: flex;
+    justify-content: space-between;
+}
+.Footer_Contact_1
+{
+    line-height: 82px;
+    display: flex;
+    width: 403px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+.Footer_Contact_1 a
+{
+    margin-right: 13px;
+}
+.Footer_Contact_1 a
+{
+    cursor: pointer;
+    color: #6f6e6d;
+}
+.Footer_Contact_1 span
+{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.Footer_Contact_1 span a
+{
+    margin-right: 2px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.Footer_Contact_2
+{
+    line-height: 82px
+}
+

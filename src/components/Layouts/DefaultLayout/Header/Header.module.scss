@@ -6,7 +6,7 @@
 .Header_full
 {
     margin: auto;
-    padding:0 20px 0 20px ;
+    padding:0 15px 0 15px ;
     width: 1192px;
     height: 86px;
     display: flex;
@@ -20,7 +20,7 @@
 }
 .Header_full_bottom
 {
-    padding:0 20px 0 20px ;
+    padding:0 12px 0 12px ;
     margin: auto;
     width: 1192px;
     height: 60px;
@@ -146,8 +146,8 @@
 }
 .Header_full_bottom_1_1
 {
-    width: 250px;
-    height: 53px;
+    width: 270px;
+    height: 52.5px;
 }
 .Header_full_bottom_1_1 button
 {
@@ -163,6 +163,18 @@
     background-color: white;
     height: 100%;
 }
+.Header_full_bottom_1_1 button span svg
+{
+    margin-right: 10px;
+}
+.Header_full_bottom_1_1 button span 
+{
+    font-weight: 700;
+}
+.Header_full_bottom_1_1 div svg
+{
+    font-size: 10px;
+}
 .Header_full_bottom_1_2
 {
     width: 523px;
@@ -172,6 +184,12 @@
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
+}
+.Header_full_bottom_1_2 ul li span svg
+{
+    margin-left: 5px;
+    font-size: 10px;
 }
 .Header_full_bottom_2
 {
@@ -192,5 +210,247 @@
     color: white;
     background-color: black;
 }
+//Show home
+.Header_full_bottom_show_home
+{
+    display: none;
+    left: 433px;
+    position: absolute;
+    width: 220px;
+    background-color: white;
+    height: 96px;
+    animation: infinite;
+    animation: headernotifiled ease 0.35s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 13px 13px 13px;
+    transform-origin: 20% top;
+}
+@keyframes headernotifiled
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+   to {
+       opacity: 1;
+       transform: scale(1);
+   }
+}
+.Header_full_bottom_show_home div
+{
+    
+    height: 100%;
+    padding: 20px;
+}
+.Header_full_bottom_show_home div ul
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.Header_full_bottom_show_home div ul li
+{
+    line-height: 24px;
+   height: 24px;
+   display: list-item;
+   font-size: 14px;
+   box-sizing: border-box;
+}
+.Header_full_bottom_show_home div ul li a
+{
+    text-decoration: none;
+    color: #737272;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: inherit;
+}
+.Header_full_bottom_show_home div ul li a:hover
+{ color: 
+    #ffbb38 ;
+text-decoration: underline;}
+.Header_full_bottom_show_home div ul li:last-child
+{
+    margin-top: 10px;
+}
+.Header_show_control1:hover .Header_full_bottom_show_home
+{
+    display: block;
+    
+}
+//show page
+.Header_full_bottom_show_page
+{
+    display: none;
+    left: 660px;
+    position: absolute;
+    width: 220px;
+    background-color: white;
+    height: 210px;
+    animation: infinite;
+    animation: headernotifiled ease 0.35s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 13px 13px 13px;
+    transform-origin: 20% top;
+}
+.Header_full_bottom_show_page div
+{
+    
+    height: 100%;
+    padding: 20px;
+}
+.Header_full_bottom_show_page div ul
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.Header_full_bottom_show_page div ul li
+{
+    line-height: 24px;
+   height: 24px;
+   display: list-item;
+   font-size: 14px;
+   box-sizing: border-box;
+}
+.Header_full_bottom_show_page div ul li a
+{
+    text-decoration: none;
+    color: #737272;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: inherit;
+}
+.Header_full_bottom_show_page div ul li a:hover
+{ color: 
+    #ffbb38 ;
+text-decoration: underline;}
+.Header_full_bottom_show_page div ul li
+{
+    margin-top: 10px;
+}
+.Header_show_control2:hover .Header_full_bottom_show_page
+{
+    display: block;
+    
+}
+//show shop
+.Header_full_bottom_show_shop
+{
+    
+    animation: infinite;
+    animation: headernotifiled ease 0.3s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 13px 13px 13px;
+    transform-origin: 35% top;
+    background-color: #fcfbfb;
+    position: absolute;
+    height: 294px;
+    padding: 30px;
+    left: 176px;
+    width: 1168px;
+    display: none;
+    
+}
+.Header_full_bottom_show_shop_main
+{
+    justify-content: space-around;
+   
+    display: flex;
+}
+.Header_full_bottom_show_shop_1 ul
+{
+    display: block;
+    padding: 0;
+}
+.Header_full_bottom_show_shop_1 ul li a
+{
+    font-size: 12px;
+    text-decoration: none;
+    color: #737272;
+}
+.Header_full_bottom_show_shop_1 ul li a:hover
+{
+    text-decoration: underline;
+    color: #ffbb38;
+}
+.Header_full_bottom_show_shop_1 ul li
+{
+    margin-top: 8px;
+    height: 32px;
+    line-height: 32px;
+    
+}
+.Header_full_bottom_show_shop_main_h1 h1
+{
+    font-size: 13px;
+
+}
+.Header_full_bottom_show_shop_main_h1
+{
+    height: 40px;
+}
+.Header_full_bottom_show_shop_main_block
+{
+    width: 190px;
+}
+.Header_show_control3:hover .Header_full_bottom_show_shop
+{
+    display: block;
+}
+//////menu
+
+.Header_full_bottom_menu
+{
+    position: absolute;
+    width: 270px;
+    height: 900px;
+    
+}
+
+.Header_full_bottom_menu ul li
+{
+   
+    
+    list-style: none;
+    height: 40px;
+    padding:0 15px 0 15px;
+    width: 100%;
+    line-height: 40px;
+    
+    background-color: white;
+}
+.Header_full_bottom_menu ul li:hover
+{
+    transition: all 0.5s;
+    background-color: #ffbb38;
+    
+}
+.Header_full_bottom_menu ul li a
+{
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+.Header_full_bottom_menu ul li a div
+{
+    justify-content: space-between;
+    display: flex;
+}
+.Header_full_bottom_menu ul li a div div:first-child span svg
+{
+    font-size: 14px;
+    color: #3f3f3f;
+}
+.Header_full_bottom_menu ul li a div div:first-child span:last-child
+{
+    margin-left: 24px;
+}
+.Header_full_bottom_menu.state ul li
+{
+    background: #dba440;
+    
+}
+
+
+
 
 
