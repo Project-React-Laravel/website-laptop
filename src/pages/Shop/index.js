@@ -6,9 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FilterGroup from '@/pages/Shop/components/FilterGroup';
 import Card from '@/pages/Shop/components/CardProduct';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const demand = ["Gaming", "Học tập - Văn phòng","Đồ họa - Kỹ thuật","Mỏng nhẹ","Cao cấp - Sang trọng"]
 const size = ["15 inch", "16 inch","17 inch","18 inch","19 inch","20 inch"]
@@ -24,21 +22,7 @@ function Shop() {
         });
     },[])
     //Gsap Animate
-    gsap.registerPlugin(ScrollTrigger);
-    const cardRef = useRef(); 
-    useEffect(()=>{
-        const card = cardRef.current
-        gsap.fromTo(card,
-            {
-                opacity: 0, 
-                x: -100, 
-            },{
-                opacity: 1, 
-                x: 0, 
-                duration: 0.7,
-                toggleActions:'play none none reverse'
-            })
-    },[])
+
 
     return (
         <div className={cx('wrapper')}>
