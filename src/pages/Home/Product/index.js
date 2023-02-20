@@ -2,8 +2,9 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Box from '@mui/material/Box'
 import ButtonCart from '../ButtonCart';
+import images from "@/pages/assets/image";
 
-function Product({children}) {
+function Product({image,name,des,price}) {
     return (  
      <div>
         <Card style={{
@@ -16,14 +17,14 @@ function Product({children}) {
             }}>
         <CardMedia 
             title="" 
-            image={children}
+            image={images[image]}
             component="img"
             sx={{ width: 210 , height: 175 , margin:'0px 0px 20px' , borderBottom:'1px solid #ccc'}} 
         />
         <Box sx={{display:'flex',flexDirection:'column',alignItems:'flex-start',fontSize:'15px',marginLeft:'15px'}}>
-                <h1 style={{fontSize:'18px'}}>Laptop Asus Vivobook A1503ZA-L1139W i5</h1>
-                <p>Senmei ipsum dolore eiusmod dolor officia do nisi</p>
-                <span style={{fontSize:'18px',fontWeight:'600',color:'#ef262c'}}>$27</span>
+                <h1 style={{fontSize:'18px'}}>{name}</h1>
+                <p style={{height:'100px',marginTop:'10px'}}>{des}</p>
+                <span style={{fontSize:'18px',fontWeight:'600',color:'#ef262c'}}>${price}</span>
         </Box>
         <ButtonCart />
         </Card>

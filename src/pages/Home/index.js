@@ -5,6 +5,8 @@ import Service from "./Service";
 import CicleCate from "./CircleCate";
 import Selling from "./Selling";
 import Product from "./Product";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -121,6 +123,27 @@ function Home() {
         setProducts(res);
       });
   }, []);
+
+  //Carousel 
+  const carousel = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   return (
     <div className={cx("wrapper-full")}>
       <div className={cx("banner")} ref={banner}>
@@ -206,7 +229,7 @@ function Home() {
           {products.map((product, index) => (
             <Selling
               key={index}
-              image={images.laptop}
+              image={product.image_url}
               name={product.name}
               des={product.description}
               price={product.price}
@@ -225,13 +248,22 @@ function Home() {
         >
           Popular Product
         </h1>
-        <div className={cx("popular-container")}>
-          <Product>{images.laptop}</Product>
-          <Product>{images.laptop2}</Product>
-          <Product>{images.laptop3}</Product>
-          <Product>{images.laptop4}</Product>
-        </div>
+          <Carousel responsive={carousel} 
+                    draggable
+                    infinite
+                    autoPlaySpeed={1000}>
+          {products.map((product, index) => (
+            <Product
+              key={product.id}
+              image={product.image_url}
+              name={product.name}
+              des={product.description}
+              price={product.price}
+            />
+          ))}
+          </Carousel>
       </div>
+      <h1 className="a b">asdasdas</h1>
     </div>
   );
 }

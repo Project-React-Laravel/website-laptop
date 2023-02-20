@@ -7,7 +7,9 @@ import FilterGroup from "@/pages/Shop/components/FilterGroup";
 import Card from "@/pages/Shop/components/CardProduct";
 
 
-import { useEffect, useState } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef, useState } from 'react';
 
 const demand = [
   "Gaming",
@@ -19,15 +21,31 @@ const demand = [
 const size = ["15 inch", "16 inch", "17 inch", "18 inch", "19 inch", "20 inch"];
 const cx = classNames.bind(styles);
 function Shop() {
-  //API Product
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://laptopapi.000webhostapp.com/api/laptops")
-      .then((res) => res.json())
-      .then((res) => {
-        setProducts(res);
-      });
-  }, []);
+    //API Product
+    const [products,setProducts] = useState([]);
+    useEffect(()=>{
+        fetch('https://laptopapi.000webhostapp.com/api/laptops')
+        .then((res) => res.json())
+        .then((res)=>{
+            setProducts(res);
+        });
+    },[])
+    //Gsap Animate
+    gsap.registerPlugin(ScrollTrigger);
+    const cardRef = useRef(); 
+    useEffect(()=>{
+        const card = cardRef.current
+        gsap.fromTo(card,
+            {
+                opacity: 0, 
+                x: -100, 
+            },{
+                opacity: 1, 
+                x: 0, 
+                duration: 0.7,
+                toggleActions:'play none none reverse'
+            })
+    },[])
 
   return (
     <div className={cx("wrapper")}>
