@@ -3,7 +3,7 @@ import styles from "./CardProduct.module.scss";
 import images from "@/pages/assets/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef ,useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -18,7 +18,7 @@ function Card({ name, des, price, image }) {
       {
         opacity: 0,
         y: 100,
-      }, 
+      },
       {
         opacity: 1,
         y: 0,
@@ -38,7 +38,9 @@ function Card({ name, des, price, image }) {
       <div className={cx("product-info")}>
         <h2 className={cx("product-name")}>{name}</h2>
         <p className={cx("product-description")}>{des}</p>
-        <p className={cx("product-price")}>{price}</p>
+        <p className={cx("product-price")}>
+          {(price*23000).toLocaleString("vi-VN")} VND
+        </p>
         <button className={cx("add-to-cart")}>Add to cart</button>
       </div>
     </div>

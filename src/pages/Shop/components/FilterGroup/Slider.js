@@ -1,33 +1,48 @@
 import { Slider, Typography, Box } from "@mui/material";
 
+var nf = Intl.NumberFormat();
+
+const marks = [
+  {
+    value: 0,
+    label: '0',
+  },
+  {
+    value: 10000000,
+    label: '10Tr',
+  },
+  {
+    value: 30000000,
+    label: '30Tr',
+  },
+  {
+    value: 50000000,
+    label: '50Tr',
+  },
+  {
+    value: 70000000,
+    label: '70Tr',
+  },
+  {
+    value: 100000000,
+    label: '100Tr',
+  },
+];
 function Slider1({ handle, values }) {
   return (
     <Box
     sx={{width: '100%'}}>
       <Slider
-        defaultValue={100000}
-        onChange={(e) => handle(e)}
-        size="small"
-        min={10000}
-        max={50000000}
-        sx={{
-          color: "#1976d2",
-          "& .MuiSlider-thumb": {
-            "&:hover, &.Mui-focusVisible": {
-              boxShadow: `0px 0px 0px 8px #1976d2,
-                    0.16
-                  )}`,
-            },
-            "&.Mui-active": {
-              boxShadow: `0px 0px 0px 14px #1976d2,
-                    0.16
-                  )}`,
-            },
-          },
-        }}
+        getAriaLabel={() => 'Minimum distance shift'}
+        value={values}
+        max={100000000}
+        onChange={handle}
+        valueLabelDisplay="auto"
+        disableSwap
+        marks={marks}
       />
       <Typography gutterBottom sx={{border: '1px'}}>
-        Price: {values}
+        Price: {nf.format(values[0])} VND {' - '}{nf.format(values[1])} VND
       </Typography>
     </Box>
   );

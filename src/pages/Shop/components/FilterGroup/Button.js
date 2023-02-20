@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 
-function Button1({ten,key}) {
+function Button1({ten}) {
   return (
     <Button
-      key={key}
       variant="outlined"
       sx={{
-        fontWeight: 400,
+        width:"50px",
+        fontWeight: 300,
+        margin: "3px",
         "&:hover": {
           backgroundColor: "#1976d2",
           color: "#fff",

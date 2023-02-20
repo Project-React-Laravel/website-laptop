@@ -9,10 +9,25 @@ import * as React from "react";
 const cx = classNames.bind(styles);
 
 function FilterGroup({ children, label, type }) {
-  const [values, setValue] = React.useState(100000);
+  const minDistance = 100000;
+  const [value2, setValue2] = React.useState([10000000, 50000000]);
 
-  const handleSlide = (val) => {
-    setValue(val.target.value);
+  const handleChange2 = (event, newValue, activeThumb) => {
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (newValue[1] - newValue[0] < minDistance) {
+      if (activeThumb === 0) {
+        const clamped = Math.min(newValue[0], 100 - minDistance);
+        setValue2([clamped, clamped + minDistance]);
+      } else {
+        const clamped = Math.max(newValue[1], minDistance);
+        setValue2([clamped - minDistance, clamped]);
+      }
+    } else {
+      setValue2(newValue);
+    }
   };
   //Checkbox
   if (type === "CheckBox") {
@@ -26,7 +41,7 @@ function FilterGroup({ children, label, type }) {
                 <FormControlLabel
                   key={index}
                   control={<Checkbox defaultChecked size="big" />}
-                  label={<span style={{ fontSize: "15px" }}>{item}</span>}
+                  label={<span style={{ fontSize: "12px" }}>{item}</span>}
                 />
               );
             })}
@@ -54,7 +69,7 @@ function FilterGroup({ children, label, type }) {
       <div className={cx("filter-group")}>
         <h3>{children}</h3>
         <div className={cx("range-filter")}>
-          <Slider1 handle={handleSlide} values={values}></Slider1>
+          <Slider1 handle={handleChange2} values={value2}></Slider1>
         </div>
       </div>
     );
