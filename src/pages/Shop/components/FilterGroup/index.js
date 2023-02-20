@@ -1,5 +1,7 @@
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Button, Checkbox, Slider, Input } from "@mui/material";
+import { Checkbox } from "@mui/material";
+import Button1 from "./Button";
+import Slider1 from "./Slider";
 import styles from "./FilterGroup.module.scss";
 import classNames from "classnames/bind";
 import * as React from "react";
@@ -11,7 +13,7 @@ function FilterGroup({ children, label, type }) {
 
   const handleSlide = (val) => {
     setValue(val.target.value);
-  }
+  };
   //Checkbox
   if (type === "CheckBox") {
     return (
@@ -19,10 +21,10 @@ function FilterGroup({ children, label, type }) {
         <h3>{children}</h3>
         <ul className={cx("list-filter")}>
           <li className={cx("item-filter")}>
-            {label.map((item,index) => {
+            {label.map((item, index) => {
               return (
                 <FormControlLabel
-                  key= {index}
+                  key={index}
                   control={<Checkbox defaultChecked size="big" />}
                   label={<span style={{ fontSize: "15px" }}>{item}</span>}
                 />
@@ -39,17 +41,10 @@ function FilterGroup({ children, label, type }) {
       <div className={cx("filter-group")}>
         <h3>{children}</h3>
         <div className={cx("button-filter")}>
-          {label.map((item,index) => {
-            return <Button 
-            key= {index}
-            variant="outlined"
-            sx={{
-              fontWeight: 400,
-              '&:hover': {
-                backgroundColor: "#1976d2",
-                color: "#fff"
-              }}}
-            >{item}</Button>;
+          {label.map((item, index) => {
+            return (
+              <Button1 ten={item} key={index}></Button1>
+            );
           })}
         </div>
       </div>
@@ -59,42 +54,7 @@ function FilterGroup({ children, label, type }) {
       <div className={cx("filter-group")}>
         <h3>{children}</h3>
         <div className={cx("range-filter")}>
-          <Slider
-            defaultValue={100000}
-            onChange={(e) => handleSlide(e)}
-            size="small"
-            min={10000}
-            max={50000000}
-            marks
-            sx={{
-              width: '100 %',
-              color: "#1976d2",
-              "& .MuiSlider-thumb": {
-                "&:hover, &.Mui-focusVisible": {
-                  boxShadow: `0px 0px 0px 8px #1976d2,
-                    0.16
-                  )}`,
-                },
-                "&.Mui-active": {
-                  boxShadow: `0px 0px 0px 14px #1976d2,
-                    0.16
-                  )}`,
-                },
-              },
-            }}
-          />
-          {/* <Label></Label> */}
-          <Input
-            value={values}
-            size="small"
-            label= 'Price'
-            inputProps={{
-              min: 0,
-              max: 25000,
-              type: 'string',
-              'aria-labelledby': 'input-slider',
-            }}
-          />
+          <Slider1 handle={handleSlide} values={values}></Slider1>
         </div>
       </div>
     );

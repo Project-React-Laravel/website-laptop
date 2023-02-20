@@ -2,6 +2,7 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import images from "@/pages/assets/image";
 
 function Selling({image,name,des,price}) {
     return (  
@@ -15,7 +16,7 @@ function Selling({image,name,des,price}) {
             }}>
             <CardMedia 
             title="" 
-            image={image}
+            image={images[image]}
             component="img"
             sx={{ width: 255 , height: 190 }} 
             />
