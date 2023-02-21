@@ -332,7 +332,6 @@ text-decoration: underline;}
 .Header_show_control2:hover .Header_full_bottom_show_page
 {
     display: block;
-    
 }
 //show shop
 .Header_full_bottom_show_shop
@@ -349,12 +348,10 @@ text-decoration: underline;}
     left: 176px;
     width: 1168px;
     display: none;
-    
 }
 .Header_full_bottom_show_shop_main
 {
     justify-content: space-around;
-   
     display: flex;
 }
 .Header_full_bottom_show_shop_1 ul
@@ -403,8 +400,8 @@ text-decoration: underline;}
 {
     position: absolute;
     width: 270px;
-    height: 900px;
-    z-index: 10;
+    height: 450px;
+    z-index: 1;
 }
 
 .Header_full_bottom_menu ul li
