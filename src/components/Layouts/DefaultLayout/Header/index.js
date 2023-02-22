@@ -107,7 +107,6 @@ function Header() {
                         </button>                    
                         <div className={cx('Header_full_bottom_menu')}   >
                             {
-                               
                                toggle && (
                                 <ul>
                                 <Menu name='Mobiles & Laptop' icon1={faLaptop}/>
