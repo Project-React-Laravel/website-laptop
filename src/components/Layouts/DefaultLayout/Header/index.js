@@ -3,7 +3,7 @@ import styles from './Header.module.scss'
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faCartShopping, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import React,{useState} from 'react';
 
 const cx = classNames.bind(styles)
@@ -77,7 +77,7 @@ function Header() {
                     </div>
                     <div>
                         <a href='/'>
-                            <span><FontAwesomeIcon icon={faBagShopping} className={cx('bag')}/></span>
+                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
                         </a>
                     </div>
                     <div>
