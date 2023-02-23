@@ -1,10 +1,11 @@
 import styles from './Header.module.scss'
-
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import React,{useState} from 'react';
+import { color } from '@mui/system';
 
 const cx = classNames.bind(styles)
 
@@ -131,7 +132,7 @@ function Header() {
                         <ul>
                             <li className={cx('Header_show_control1')}>
                                 <span>
-                                    <span >Homepage</span>
+                                    <Link to="/" style={{color:'#000000',textDecoration:'none'}}>Home</Link>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
                                 <div className={cx('Header_full_bottom_show_home')}>
@@ -145,7 +146,7 @@ function Header() {
                             </li>
                             <li className={cx('Header_show_control3')}>
                                 <span>
-                                    <span>Shop</span>
+                                    <Link to="/shop" style={{color:'#000000',textDecoration:'none'}}>Shop</Link>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
                                 <div className={cx('Header_full_bottom_show_shop')}>

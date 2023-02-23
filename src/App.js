@@ -1,7 +1,7 @@
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Card from './pages/Card';
+import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
           <Routes>
               <Route path='/' element={<Home/>}></Route>
               <Route path='/shop' element={<Shop/>}></Route>
-              <Route path='/card' element={<Card/>}></Route>
+              <Route path='/cart' element={<Cart/>}></Route>
           </Routes>
         </Layout>
         

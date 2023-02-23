@@ -248,11 +248,14 @@ function Home() {
         >
           Popular Product
         </h1>
+        <div style={{marginLeft:'10px'}}>
           <Carousel responsive={carousel} 
                     draggable
                     infinite
-                    autoPlaySpeed={1000}>
-          {products.map((product, index) => (
+                    autoPlaySpeed={1000}
+                    centerMode={false}
+                    >
+            {products.map((product) => (
             <Product
               key={product.id}
               image={product.image_url}
@@ -262,8 +265,8 @@ function Home() {
             />
           ))}
           </Carousel>
+          </div>
       </div>
-      <h1 className="a b">asdasdas</h1>
     </div>
   );
 }
