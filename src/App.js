@@ -1,6 +1,7 @@
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 

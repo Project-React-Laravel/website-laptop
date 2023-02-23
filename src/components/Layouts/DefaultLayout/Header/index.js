@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faCartShopping, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import React,{useState} from 'react';
 import { color } from '@mui/system';
 
@@ -78,7 +78,7 @@ function Header() {
                     </div>
                     <div>
                         <a href='/'>
-                            <span><FontAwesomeIcon icon={faBagShopping} className={cx('bag')}/></span>
+                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
                         </a>
                     </div>
                     <div>
@@ -108,7 +108,6 @@ function Header() {
                         </button>                    
                         <div className={cx('Header_full_bottom_menu')}   >
                             {
-                               
                                toggle && (
                                 <ul>
                                 <Menu name='Mobiles & Laptop' icon1={faLaptop}/>
