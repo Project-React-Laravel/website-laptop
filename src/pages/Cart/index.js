@@ -182,7 +182,7 @@ function Cart() {
                         <TextField
                         label="Postcode / Zip"
                         id="outlined-start-adornment"
-                        sx={{ width: 308, height: 50 }}
+                        sx={{ width: 308, height: 51 }}
                         />
                     </div>
                   </div>
