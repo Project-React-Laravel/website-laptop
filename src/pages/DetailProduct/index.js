@@ -36,8 +36,7 @@ function DetailProduct() {
   const carousel = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      partialVisibilityGutter: 85, // this is needed to tell the amount of px that should be visible.
+      items: 4,
     },
   };
   return (
