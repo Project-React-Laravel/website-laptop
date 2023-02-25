@@ -54,8 +54,11 @@
 .text-sorting{
     line-height: 19.5px;
     font-size: 13px;
-    color: #797979;
     display: inline;
+    span{
+        color: #797979;
+        
+    }
 }
 .menu-sorting{
     width: 127px;

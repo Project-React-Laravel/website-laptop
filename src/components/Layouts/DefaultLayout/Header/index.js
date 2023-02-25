@@ -137,8 +137,8 @@ function Header() {
                                 <div className={cx('Header_full_bottom_show_home')}>
                                     <div>
                                         <ul>
-                                            <li><a href='/'>Home One</a></li>
-                                            <li><a href='/'>Home Two</a></li>
+                                            <li><a href='/shop'>Home One</a></li>
+                                            <li><a href='/shop'>Home Two</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -154,11 +154,11 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>Shop LIST</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Shop Sidebar</a></li>
-                                                    <li><a href='/'>Shop Fullwidth</a></li>
-                                                    <li><a href='/'>Shop Category Icon</a></li>
-                                                    <li><a href='/'>Shop Category Icon</a></li>
-                                                    <li><a href='/'>Shop List View</a></li>
+                                                    <li><a href='/shop'>Shop Sidebar</a></li>
+                                                    <li><a href='/shop'>Shop Fullwidth</a></li>
+                                                    <li><a href='/shop'>Shop Category Icon</a></li>
+                                                    <li><a href='/shop'>Shop Category Icon</a></li>
+                                                    <li><a href='/shop'>Shop List View</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -166,10 +166,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>PRODUCT LAYOUTS</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Horizonral Thumbnail</a></li>
-                                                    <li><a href='/'>Vertical Thumbnail</a></li>
-                                                    <li><a href='/'>Gallery Thumbnail</a></li>
-                                                    <li><a href='/'>Sticky Summary</a></li>
+                                                    <li><a href='/shop'>Horizonral Thumbnail</a></li>
+                                                    <li><a href='/shop'>Vertical Thumbnail</a></li>
+                                                    <li><a href='/shop'>Gallery Thumbnail</a></li>
+                                                    <li><a href='/shop'>Sticky Summary</a></li>
                               
                                                 </ul>
                                             </div>
@@ -179,10 +179,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>POLULAR CATEGORY</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Phone & Tablet</a></li>
-                                                    <li><a href='/'>Gaming & Sports</a></li>
-                                                    <li><a href='/'>Home Appliance</a></li>
-                                                    <li><a href='/'>Fashion Clothes</a></li>
+                                                    <li><a href='/shop'>Phone & Tablet</a></li>
+                                                    <li><a href='/shop'>Gaming & Sports</a></li>
+                                                    <li><a href='/shop'>Home Appliance</a></li>
+                                                    <li><a href='/shop'>Fashion Clothes</a></li>
                                                     
                                                 </ul>
                                             </div>

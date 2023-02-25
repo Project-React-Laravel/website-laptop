@@ -4,7 +4,7 @@ import Select1 from "./components/SelectNonLabel";
 import Button1 from "./components/Button";
 import BasicTabs from "./components/Tabs";
 import images from "../assets/image";
-import image from "./assets";
+import logo from "./assets";
 import React from "react";
 import Card from "../Shop/components/CardProduct";
 import Carousel from "react-multi-carousel";
@@ -79,11 +79,11 @@ function DetailProduct() {
               Samsung Galaxy Z Fold3 5G 3 colors in 512GB
             </p>
             <div className={cx("productVote")}>
-              <img src={image.Star} alt="Star" />
-              <img src={image.Star} alt="Star" />
-              <img src={image.Star} alt="Star" />
-              <img src={image.Star} alt="Star" />
-              <img src={image.Star} alt="Star" />
+              <img src={logo.Star} alt="Star" />
+              <img src={logo.Star} alt="Star" />
+              <img src={logo.Star} alt="Star" />
+              <img src={logo.Star} alt="Star" />
+              <img src={logo.Star} alt="Star" />
               <span>6 Reviews</span>
             </div>
             <div className={cx("productPrice")}>21.000.000 VND</div>
@@ -111,7 +111,7 @@ function DetailProduct() {
                 <button onClick={increase}>+</button>
               </div>
               <div>
-                <img src={image.Heart} alt="Heart" />
+                <img src={logo.Heart} alt="Heart" />
               </div>
               <Button1></Button1>
             </div>

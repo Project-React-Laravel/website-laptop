@@ -4,6 +4,8 @@ import images from "@/pages/assets/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
+import logo from "@/pages/DetailProduct/assets";
 
 const cx = classNames.bind(styles);
 
@@ -36,10 +38,19 @@ function Card({ name, des, price, image }) {
         <img src={images[image]} alt="Banner" className={cx("image")} />
       </div>
       <div className={cx("product-info")}>
-        <h2 className={cx("product-name")}>{name}</h2>
+        <div className={cx('product-reviews')}>
+          <img src={logo.Star} alt={'star'}/>
+          <img src={logo.Star} alt={'star'}/>
+          <img src={logo.Star} alt={'star'}/>
+          <img src={logo.Star} alt={'star'}/>
+          <img src={logo.Star} alt={'star'}/>
+        </div>
+        <Link to="/detailProduct" className={cx('product-name')}>
+          {name}
+        </Link>
         <p className={cx("product-description")}>{des}</p>
         <p className={cx("product-price")}>
-          {(price*23000).toLocaleString("vi-VN")} VND
+          {(price * 23000).toLocaleString("vi-VN")} VND
         </p>
         <button className={cx("add-to-cart")}>Add to cart</button>
       </div>

@@ -1,7 +1,7 @@
 .item-card{
     background-color: #ffffff;
     width: 270px;
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -27,13 +27,21 @@
     justify-content: space-between;
     display: inline-block;
 }
+.product-reviews{
+
+}
 .product-name{
+    color: #222222;
     font-weight: 300;
     font-size: 1.5em;
     margin: 0 0 5px;
     font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
+}
+.product-name:hover{
+    color: blue;
 }
 .product-price{
     margin: 0 0 5px;
