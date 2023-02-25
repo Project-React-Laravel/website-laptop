@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FilterGroup from "@/pages/Shop/components/FilterGroup";
 import Card from "@/pages/Shop/components/CardProduct";
 
-
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
