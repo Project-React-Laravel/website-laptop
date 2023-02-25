@@ -1,8 +1,9 @@
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Card from './pages/Cart';
+import Card from './pages/Card';
 import Checkout from './pages/Checkout';
+import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 import DetailProduct from './pages/DetailProduct';
 
@@ -17,7 +18,6 @@ function App() {
               <Route path='/shop' element={<Shop/>}></Route>
               <Route path='/card' element={<Card/>}></Route>
               <Route path='/checkout' element={<Checkout/>}></Route>
-              <Route path='/detailProduct' element={<DetailProduct/>}></Route>
           </Routes>
         </Layout>
         
