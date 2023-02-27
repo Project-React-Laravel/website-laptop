@@ -5,7 +5,8 @@ import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faCartShopping, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import React,{useState} from 'react';
-import { color } from '@mui/system';
+import { cartListSelectors } from '@/redux/selectors';
+import { useSelector } from 'react-redux';
 
 const cx = classNames.bind(styles)
 
@@ -32,7 +33,7 @@ function Menu({name,icon1})
     </li>)
 }
 function Header() {
-   
+    const cartList = useSelector(cartListSelectors);
     const[toggle,setToggle]=useState(false)
     return <header className={cx('wrapper')}>
         <div className={cx('Header_container_top')} >
@@ -78,7 +79,9 @@ function Header() {
                     </div>
                     <div>
                         <a href='/'>
-                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
+                        <Link to="/cart" style={{color:'#000000',textDecoration:'none'}}>
+                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/>{cartList.length}</span>
+                        </Link>    
                         </a>
                     </div>
                     <div>

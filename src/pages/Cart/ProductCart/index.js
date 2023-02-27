@@ -5,37 +5,45 @@ import { TableRow, TableCell, CardMedia, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteCart } from "@/redux/actions";
 
 const cx = classNames.bind(styles);
 
-function ProductCart() {
+function ProductCart({img,name,size,price,qty1,totalPrice}) {
+  const item = {img,name,size,price};
+  const dispath = useDispatch();
+  const handleDelete = ()=>{
+    dispath(deleteCart({item}))
+  }
   //Quantity And Total Product
   const total = 38;
-  const [qty, setQty] = useState(1);
-  const [priceProduct, setPrice] = useState(38);
-  const increase = () => {
-    setQty(qty + 1);
-  };
-  const decrease = () => {
-    setQty(qty - 1);
-    if (qty <= 1) {
-      setQty(1);
-    }
-  };
-  useEffect(() => {
-    setPrice(qty * total);
-  }, [qty]);
+  // const [qty, setQty] = useState(qty1);
+  // const [priceProduct, setPrice] = useState(38);
+  // const increase = () => {
+  //   setQty(qty + 1);
+  // };
+  // const decrease = () => {
+  //   setQty(qty - 1);
+  //   if (qty <= 1) {
+  //     setQty(1);
+  //   }
+  // };
+  // useEffect(() => {
+  //   setPrice(qty * total);
+  // }, [qty]);
 
   return (
+    
     <TableRow>
       <TableCell className={cx("product-cell")}>
         <CardMedia
-          image={images["laptop.png"]}
+          image={images[img]}
           className={cx("img-product-cart")}
           component="img"
         />
         <Box className={cx("name-product-cart")}>
-          <p>Laptop Asus</p>
+          <p>{name}</p>
         </Box>
       </TableCell>
       <TableCell>
@@ -46,30 +54,30 @@ function ProductCart() {
         ></span>
       </TableCell>
       <TableCell className={cx("cart-cell")}>
-        <p>Small</p>
+        <p>{size}</p>
       </TableCell>
       <TableCell className={cx("cart-cell")}>
-        <p>$38</p>
+        <p>${price}</p>
       </TableCell>
       <TableCell className={cx("cart-cell")}>
         <div className={cx("input-container")}>
           <div className={cx("input-sub-container")}>
-            <button onClick={decrease} className={cx("btn-qty-cart")}>
+            <button  className={cx("btn-qty-cart")}>
               <FontAwesomeIcon icon={faMinus} />
             </button>
-            <span>{qty}</span>
-            <button onClick={increase} className={cx("btn-qty-cart")}>
+            <span>{qty1}</span>
+            <button  className={cx("btn-qty-cart")}>
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
         </div>
       </TableCell>
       <TableCell className={cx("cart-cell")}>
-        <p>${priceProduct}</p>
+        <p>${totalPrice}</p>
       </TableCell>
       <TableCell className={cx("cart-cell")}>
         <span>
-          <FontAwesomeIcon icon={faXmark} className={cx("icon-delete-cart")} />
+          <FontAwesomeIcon icon={faXmark} className={cx("icon-delete-cart")} onClick={handleDelete} />
         </span>
       </TableCell>
     </TableRow>

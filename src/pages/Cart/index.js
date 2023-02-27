@@ -13,33 +13,54 @@ import {
 import ProductCart from "./ProductCart";
 import TextField from "@mui/material/TextField";
 import Button from "./Button";
-import { width } from "@mui/system";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { cartListSelectors } from "@/redux/selectors";
+import CartList from "@/redux/selectors";
+import React from 'react';
 
 const cx = classNames.bind(styles);
 const locations = [
-      'Quận 1',
-      'Quận 3',
-      'Quận 4',
-      'Quận 5',
-      'Quận 6',
-      'Quận 7',
-      'Quận 8',
-      'Quận 10',
-      'Quận 11',
-      'Quận 12',
-      'Quận Bình Tân',
-      'Quận Bình Thạnh',
-      'Quận Gò Vấp',
-      'Quận Phú Nhuận',
-      'Quận Tân Bình',
-      'Quận Tân Phú',
-      'Quận Bình Chánh',
-      'Quận Cần Giờ',
-      'Quận Củ Chi',
-      'Quận Hóc Môn',
-      'Quận Nhà Bè', 
-]
+  "Quận 1",
+  "Quận 3",
+  "Quận 4",
+  "Quận 5",
+  "Quận 6",
+  "Quận 7",
+  "Quận 8",
+  "Quận 10",
+  "Quận 11",
+  "Quận 12",
+  "Quận Bình Tân",
+  "Quận Bình Thạnh",
+  "Quận Gò Vấp",
+  "Quận Phú Nhuận",
+  "Quận Tân Bình",
+  "Quận Tân Phú",
+  "Quận Bình Chánh",
+  "Quận Cần Giờ",
+  "Quận Củ Chi",
+  "Quận Hóc Môn",
+  "Quận Nhà Bè",
+];
+const shippings = [
+  {
+    id: 1,
+    name: "Free Shipping",
+  },
+  {
+    id: 2,
+    name: "Flat Rate",
+  },
+  {
+    id: 3,
+    name: "Local Delivery",
+  },
+];
+
 function Cart() {
+  const cartList = useSelector(cartListSelectors);
+  const [checked, setChecked] = useState();
   return (
     <div>
       <div className={cx("wrapper")}>
@@ -79,9 +100,17 @@ function Cart() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <ProductCart />
-                  <ProductCart />
-                  <ProductCart />
+                  {
+                    cartList.map((product)=>
+                      <ProductCart 
+                        img={product.img} 
+                        name={product.name}
+                        size={product.size}
+                        price={product.price}
+                        qty1={product.quantity}
+                        totalPrice={product.price*product.quantity}
+                      />)
+                  }
                 </TableBody>
               </Table>
             </TableContainer>
@@ -127,33 +156,21 @@ function Cart() {
                 <div className={cx("shipping")}>
                   <span style={{ marginBottom: 18 }}>Shipping</span>
                   <ul>
-                    <li className={cx("list-shipping")}>
-                      <div className={cx("shiping-option-container")}>
-                        <div className={cx("shiping-option")}>
-                          <input type="radio" />
-                          <span>Free Shipping</span>
+                    {shippings.map((shipping) => (
+                      <li className={cx("list-shipping")} key={shipping.id}>
+                        <div className={cx("shiping-option-container")}>
+                          <div className={cx("shiping-option")}>
+                            <input
+                              type="radio"
+                              checked={checked === shipping.id}
+                              onChange={() => setChecked(shipping.id)}
+                            />
+                            <span>{shipping.name}</span>
+                          </div>
+                          <span>+$00.00</span>
                         </div>
-                        <span>+$00.00</span>
-                      </div>
-                    </li>
-                    <li className={cx("list-shipping")}>
-                      <div className={cx("shiping-option-container")}>
-                        <div className={cx("shiping-option")}>
-                          <input type="radio" />
-                          <span>Flat Rate</span>
-                        </div>
-                        <span>+$00.00</span>
-                      </div>
-                    </li>
-                    <li className={cx("list-shipping")}>
-                      <div className={cx("shiping-option-container")}>
-                        <div className={cx("shiping-option")}>
-                          <input type="radio" />
-                          <span>Local Delivery</span>
-                        </div>
-                        <span>+$00.00</span>
-                      </div>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 {/* Caculate Shipping */}
@@ -161,43 +178,40 @@ function Cart() {
                   <span style={{ marginBottom: 18 }}>Caculate Shipping</span>
                   <div className={cx("caculate-body")}>
                     <div className={cx("caculate-input")}>
-                        <TextField
+                      <TextField
                         id="outlined-select-currency"
                         select
                         label="Select Country"
                         defaultValue=""
                         sx={{ width: 308, height: 50 }}
-                        >
-                          {
-                            locations.map((location,index)=>{
-                              return(
-                                <MenuItem key={index} value={location}>
-                                  {location}
-                                </MenuItem>
-                              );
-                            })
-                          }
-
-                        </TextField>
-                        <TextField
+                      >
+                        {locations.map((location, index) => {
+                          return (
+                            <MenuItem key={index} value={location}>
+                              {location}
+                            </MenuItem>
+                          );
+                        })}
+                      </TextField>
+                      <TextField
                         label="Postcode / Zip"
                         id="outlined-start-adornment"
                         sx={{ width: 308, height: 51 }}
-                        />
+                      />
                     </div>
                   </div>
                 </div>
                 {/* Button */}
-                <div className={cx('btn-checkout')}>
-                  <Button title={"Update Cart"}/>
+                <div className={cx("btn-checkout")}>
+                  <Button title={"Update Cart"} />
                 </div>
                 {/* Total */}
-                <div className={cx('total-checkout')}>
-                    <p>Total</p>
-                    <p style={{ color: "#ef262c" }}>$365</p>
+                <div className={cx("total-checkout")}>
+                  <p>Total</p>
+                  <p style={{ color: "#ef262c" }}>$365</p>
                 </div>
                 <div className={cx()}>
-                  <Button title={"Proceed to Checkout"}/>
+                  <Button title={"Proceed to Checkout"} />
                 </div>
               </div>
             </div>
