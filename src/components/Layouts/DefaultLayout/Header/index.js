@@ -1,9 +1,6 @@
 import styles from './Header.module.scss'
-<<<<<<< HEAD
 import imggame from'../Img/game.jpg'
-=======
 import { Link } from 'react-router-dom';
->>>>>>> 35255eeaa28e7fa7761b5863c114cbcca79661df
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -85,8 +82,7 @@ function Header() {
                     </div>
                     <div className={cx('Header_full_3_1')}>
                        
-                        <a href='/'>
-<<<<<<< HEAD
+                        <a href='#'>
                             <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
                          </a>
                         <span className={cx('Header_full_3_1_countcard')}>15</span>
@@ -181,12 +177,6 @@ function Header() {
                        </div>
                        
                         
-=======
-                        <Link to="/cart" style={{color:'#000000',textDecoration:'none'}}>
-                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/>{cartList.length}</span>
-                        </Link>    
-                        </a>
->>>>>>> 35255eeaa28e7fa7761b5863c114cbcca79661df
                     </div>
                     <div className={cx('Header_full_3_1')}>
                         <a href="/">

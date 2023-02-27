@@ -37,7 +37,7 @@ function Checkout() {
             </div>
             <div className={cx("body")}>
               <div className={cx("form")}>
-                <h1 className={cx("header-form")}>Billing Details</h1>
+                <h1 className={cx("header-form-1")}>Billing Details</h1>
                 <div className={cx("header-form-contact")}>
                   <form  method="#">
                     <div className={cx("header-form-contact-info")}>
@@ -63,30 +63,30 @@ function Checkout() {
 
                     <div className={cx("header-form-contact-country")}>
                        <h1>Country *</h1>
-                       <div>
+                       <div className={cx("header-form-contact-country-1")}>
                         <span>Select Country</span>
                         <span><FontAwesomeIcon icon={faChevronDown}/></span>
                        </div>
                     </div>
                     <div className={cx("header-form-contact-country")}>
                        <h1>Address *</h1>
-                       <div>
+                       <div className={cx("header-form-contact-country-1")}>
                         <span>Your Address here</span>
                       
                        </div>
                     </div>
                     <div className={cx("header-form-contact-info")}>
                       <div  className={cx("header-form-contact-info-1")}>
-                       <div >
-                        <h1>Town/City*</h1>
+                       <div  className={cx("header-form-contact-info-1-css")} >
+                        <h1 >Town/City*</h1>
                         <div className={cx("header-form-contact-info-1-1")}>
                             <span>MiyamiTown</span>
                             <span><FontAwesomeIcon icon={faChevronDown}/></span>
                         </div>
                        </div>
                       </div>
-                      <div  className={cx("header-form-contact-info-1")}>
-                        <label>Postcode/Zip*</label><br></br>
+                      <div  className={cx("header-form-contact-info-2")}>
+                        <label >Postcode/Zip*</label><br></br>
                         <input ></input>
                       </div>
                     </div>
@@ -109,7 +109,7 @@ function Checkout() {
                 </div>
               </div>
               <div className={cx("list")}>
-                <h1 className={cx("header-form")}>Order Summary</h1>
+                <h1 className={cx("header-form-2")}>Order Summary</h1>
                 <div className={cx("header-form-contact-order-main")}>
                   <div className={cx("header-form-contact-order-main-1")}>
                     <div className={cx("header-form-contact-order-main-1-1")}>
@@ -139,7 +139,44 @@ function Checkout() {
                         </li>
                       </ul>
                   </div>
-                  
+                   <div className={cx("header-form-contact-order-main-3")}>
+                      <ul>
+                        <li>
+                          <div className={cx("header-form-contact-order-main-3-1")}>
+                            <div className={cx("header-form-contact-order-main-3-1-1")}>
+                              <h5>Apple Watch <sup>x1</sup></h5>
+                              
+                              <p>64GB,Black,44mm,Chain Belt</p>
+                            </div>
+                            <div className={cx("header-form-contact-order-main-3-1-2")}>
+                              $38
+                            </div>
+                          </div>
+                          <div>
+
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+                  <div className={cx("header-form-contact-order-main-3")}>
+                      <ul>
+                        <li>
+                          <div className={cx("header-form-contact-order-main-3-1")}>
+                            <div className={cx("header-form-contact-order-main-3-1-1")}>
+                              <h5>Apple Watch <sup>x1</sup></h5>
+                              
+                              <p>64GB,Black,44mm,Chain Belt</p>
+                            </div>
+                            <div className={cx("header-form-contact-order-main-3-1-2")}>
+                              $38
+                            </div>
+                          </div>
+                          <div>
+
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
                   <div className={cx("header-form-contact-order-main-2")}></div>
                   
                   <div className={cx("header-form-contact-order-main-4")}>
