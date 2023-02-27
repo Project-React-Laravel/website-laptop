@@ -4,7 +4,6 @@ import images from "@/pages/assets/image";
 import { TableRow, TableCell, CardMedia, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteCart } from "@/redux/actions";
 
@@ -17,7 +16,7 @@ function ProductCart({img,name,size,price,qty1,totalPrice}) {
     dispath(deleteCart({item}))
   }
   //Quantity And Total Product
-  const total = 38;
+  // const total = 38;
   // const [qty, setQty] = useState(qty1);
   // const [priceProduct, setPrice] = useState(38);
   // const increase = () => {

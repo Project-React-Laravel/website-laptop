@@ -16,7 +16,6 @@ import Button from "./Button";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { cartListSelectors } from "@/redux/selectors";
-import CartList from "@/redux/selectors";
 import React from 'react';
 
 const cx = classNames.bind(styles);
@@ -221,5 +220,4 @@ function Cart() {
     </div>
   );
 }
-
 export default Cart;

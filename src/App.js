@@ -4,6 +4,7 @@ import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
+import DetailProduct from './pages/DetailProduct';
 
 function App() {
   const Layout = DefaultLayout
@@ -16,6 +17,7 @@ function App() {
               <Route path='/shop' element={<Shop/>}></Route>
               <Route path='/cart' element={<Cart/>}></Route>
               <Route path='/checkout' element={<Checkout/>}></Route>
+              <Route path='/detailProduct' element={<DetailProduct/>}></Route>
           </Routes>
         </Layout>
         

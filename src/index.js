@@ -17,7 +17,7 @@ root.render(
         vertical: 'top',
         horizontal: 'right',
       }}
-      autoHideDuration={1500}
+      autoHideDuration={1000}
     >
       <GlobalStyles>
         <App />
