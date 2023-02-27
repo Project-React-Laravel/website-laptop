@@ -1,10 +1,16 @@
 import styles from './Header.module.scss'
+<<<<<<< HEAD
 import imggame from'../Img/game.jpg'
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 35255eeaa28e7fa7761b5863c114cbcca79661df
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, faCartShopping, faChevronDown, faChevronRight, faGamepad, faHeart, faLaptop, faMarsStrokeUp, faPassport, faToilet, faUser, faVideo } from '@fortawesome/free-solid-svg-icons';
 import React,{useState} from 'react';
+import { cartListSelectors } from '@/redux/selectors';
+import { useSelector } from 'react-redux';
 
 const cx = classNames.bind(styles)
 
@@ -31,7 +37,7 @@ function Menu({name,icon1})
     </li>)
 }
 function Header() {
-   
+    const cartList = useSelector(cartListSelectors);
     const[toggle,setToggle]=useState(false)
     return <header className={cx('wrapper')}>
         <div className={cx('Header_container_top')} >
@@ -80,6 +86,7 @@ function Header() {
                     <div className={cx('Header_full_3_1')}>
                        
                         <a href='/'>
+<<<<<<< HEAD
                             <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
                          </a>
                         <span className={cx('Header_full_3_1_countcard')}>15</span>
@@ -174,10 +181,18 @@ function Header() {
                        </div>
                        
                         
+=======
+                        <Link to="/cart" style={{color:'#000000',textDecoration:'none'}}>
+                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/>{cartList.length}</span>
+                        </Link>    
+                        </a>
+>>>>>>> 35255eeaa28e7fa7761b5863c114cbcca79661df
                     </div>
                     <div className={cx('Header_full_3_1')}>
                         <a href="/">
-                            <span><FontAwesomeIcon icon={faUser}className={cx('user')}/></span>
+                        <Link to="/login" style={{color:'#000000',textDecoration:'none'}}>
+                            <span><FontAwesomeIcon icon={faUser} className={cx('user')}/></span>
+                        </Link> 
                         </a>
                     </div>
                 </div>
@@ -225,21 +240,21 @@ function Header() {
                         <ul>
                             <li className={cx('Header_show_control1')}>
                                 <span>
-                                    <span >Homepage</span>
+                                    <Link to="/" style={{color:'#000000',textDecoration:'none'}}>Home</Link>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
                                 <div className={cx('Header_full_bottom_show_home')}>
                                     <div>
                                         <ul>
-                                            <li><a href='/'>Home One</a></li>
-                                            <li><a href='/'>Home Two</a></li>
+                                            <li><a href='/shop'>Home One</a></li>
+                                            <li><a href='/shop'>Home Two</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
                             <li className={cx('Header_show_control3')}>
                                 <span>
-                                    <span>Shop</span>
+                                    <Link to="/shop" style={{color:'#000000',textDecoration:'none'}}>Shop</Link>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
                                 <div className={cx('Header_full_bottom_show_shop')}>
@@ -248,11 +263,11 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>Shop LIST</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Shop Sidebar</a></li>
-                                                    <li><a href='/'>Shop Fullwidth</a></li>
-                                                    <li><a href='/'>Shop Category Icon</a></li>
-                                                    <li><a href='/'>Shop Category Icon</a></li>
-                                                    <li><a href='/'>Shop List View</a></li>
+                                                    <li><a href='/shop'>Shop Sidebar</a></li>
+                                                    <li><a href='/shop'>Shop Fullwidth</a></li>
+                                                    <li><a href='/shop'>Shop Category Icon</a></li>
+                                                    <li><a href='/shop'>Shop Category Icon</a></li>
+                                                    <li><a href='/shop'>Shop List View</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -260,10 +275,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>PRODUCT LAYOUTS</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Horizonral Thumbnail</a></li>
-                                                    <li><a href='/'>Vertical Thumbnail</a></li>
-                                                    <li><a href='/'>Gallery Thumbnail</a></li>
-                                                    <li><a href='/'>Sticky Summary</a></li>
+                                                    <li><a href='/shop'>Horizonral Thumbnail</a></li>
+                                                    <li><a href='/shop'>Vertical Thumbnail</a></li>
+                                                    <li><a href='/shop'>Gallery Thumbnail</a></li>
+                                                    <li><a href='/shop'>Sticky Summary</a></li>
                               
                                                 </ul>
                                             </div>
@@ -273,10 +288,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>POLULAR CATEGORY</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/'>Phone & Tablet</a></li>
-                                                    <li><a href='/'>Gaming & Sports</a></li>
-                                                    <li><a href='/'>Home Appliance</a></li>
-                                                    <li><a href='/'>Fashion Clothes</a></li>
+                                                    <li><a href='/shop'>Phone & Tablet</a></li>
+                                                    <li><a href='/shop'>Gaming & Sports</a></li>
+                                                    <li><a href='/shop'>Home Appliance</a></li>
+                                                    <li><a href='/shop'>Fashion Clothes</a></li>
                                                     
                                                 </ul>
                                             </div>

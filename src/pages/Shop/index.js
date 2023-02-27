@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FilterGroup from "@/pages/Shop/components/FilterGroup";
 import Card from "@/pages/Shop/components/CardProduct";
 
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect, useRef, useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
+import { Pagination,Box,Stack } from "@mui/material";
 
 const demand = [
   "Gaming",
@@ -21,31 +21,42 @@ const demand = [
 const size = ["15 inch", "16 inch", "17 inch", "18 inch", "19 inch", "20 inch"];
 const cx = classNames.bind(styles);
 function Shop() {
-    //API Product
-    const [products,setProducts] = useState([]);
-    useEffect(()=>{
-        fetch('https://laptopapi.000webhostapp.com/api/laptops')
-        .then((res) => res.json())
-        .then((res)=>{
-            setProducts(res);
-        });
-    },[])
-    //Gsap Animate
-    gsap.registerPlugin(ScrollTrigger);
-    const cardRef = useRef(); 
-    useEffect(()=>{
-        const card = cardRef.current
-        gsap.fromTo(card,
-            {
-                opacity: 0, 
-                x: -100, 
-            },{
-                opacity: 1, 
-                x: 0, 
-                duration: 0.7,
-                toggleActions:'play none none reverse'
-            })
-    },[])
+  //API Product
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://laptopapi.000webhostapp.com/api/laptops")
+      .then((res) => res.json())
+      .then((res) => {
+        setProducts(res);
+      });
+  }, []);
+  //Pagination\
+  // const [page, setPage] = useState([]);
+  // const [totalPage, setTotalPage] = useState(0);
+  // const pageSize= 2;
+
+  // const Paginations = () => {
+    
+  // }
+  //Gsap Animate
+  gsap.registerPlugin(ScrollTrigger);
+  const cardRef = useRef();
+  useEffect(() => {
+    const card = cardRef.current;
+    gsap.fromTo(
+      card,
+      {
+        opacity: 0,
+        x: -100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        toggleActions: "play none none reverse",
+      }
+    );
+  }, []);
 
   return (
     <div className={cx("wrapper")}>
@@ -71,7 +82,9 @@ function Shop() {
         </div>
         <div className={cx("list")}>
           <div className={cx("product-sorting")}>
-            <p className={cx("text-sorting")}>Showing</p>
+            <p className={cx("text-sorting")}>
+              <span>Showing</span> 1-16 of 66 results
+            </p>
             <div className={cx("menu-sorting")}>
               <span>Sort by:</span>
               <div className={cx("list-sorting")}>
@@ -93,6 +106,11 @@ function Shop() {
               ></Card>
             ))}
           </div>
+          <Box sx={{width:"100%"}} display={'flex'} justifyContent='center'>
+          <Stack spacing={2}>
+            <Pagination count={7} shape="rounded" color="warning" />
+          </Stack>
+          </Box>
         </div>
       </div>
     </div>

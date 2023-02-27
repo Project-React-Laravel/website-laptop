@@ -1,9 +1,11 @@
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Card from './pages/Card';
 import Checkout from './pages/Checkout';
+import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
+import DetailProduct from './pages/DetailProduct';
+import Login from './pages/Login';
 
 function App() {
   const Layout = DefaultLayout
@@ -14,8 +16,10 @@ function App() {
           <Routes>
               <Route path='/' element={<Home/>}></Route>
               <Route path='/shop' element={<Shop/>}></Route>
-              <Route path='/card' element={<Card/>}></Route>
+              <Route path='/cart' element={<Cart/>}></Route>
               <Route path='/checkout' element={<Checkout/>}></Route>
+              <Route path='/detailProduct' element={<DetailProduct/>}></Route>
+              <Route path='/login' element={<Login/>}></Route>
           </Routes>
         </Layout>
         
