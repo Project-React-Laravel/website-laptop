@@ -165,7 +165,7 @@ function Checkout() {
                             <div className={cx("header-form-contact-order-main-3-1-1")}>
                               <h5>Apple Watch <sup>x1</sup></h5>
                               
-                              <p>64GB,Black,44mm,Chain Belt</p>
+                              <p>64GB,Black,44mm,Chain Beltsass</p>
                             </div>
                             <div className={cx("header-form-contact-order-main-3-1-2")}>
                               $38
