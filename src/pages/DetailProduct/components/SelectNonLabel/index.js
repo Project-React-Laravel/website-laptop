@@ -1,34 +1,40 @@
-import { Select, MenuItem, FormControl } from "@mui/material";
-import * as React from "react";
-import { styled } from "@mui/system";
+import { Select, MenuItem, FormControl } from '@mui/material';
+import * as React from 'react';
+import { styled } from '@mui/system';
 function Select1() {
-  const [age, setAge] = React.useState("");
-  const CustomSelect = styled(Select)(
-    {
-        borderRadius: 0
-    }
-  )
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-  return (
-    <FormControl sx={{ minWidth: "100%" }}>
-      <CustomSelect
-        value={age}
-        className="select"
-        onChange={handleChange}
-        displayEmpty
-        inputProps={{ "aria-label": "Without label" }}
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
-      </CustomSelect>
-    </FormControl>
-  );
+    const [size, setSize] = React.useState('');
+    const CustomSelect = styled(Select)({
+        borderRadius: 0,
+    });
+    const CustomItem = styled(MenuItem)({
+        color: '#222222',
+        fontSize: '13px',
+        textAlign: 'center',
+        lineHeight: '19.5px',
+    });
+    const handleChange = (event) => {
+        setSize(event.target.value);
+    };
+    return (
+        <FormControl sx={{ minWidth: '100%' }}>
+            <CustomSelect
+                value={size}
+                className="select"
+                onChange={handleChange}
+                displayEmpty
+                style={{
+                    color: '#222222',
+                    fontSize: '13px',
+                    lineHeight: '19.5px',
+                }}
+            >
+                <CustomItem value="">Select size</CustomItem>
+                <CustomItem value={10}>Medium</CustomItem>
+                <CustomItem value={20}>Large</CustomItem>
+                <CustomItem value={30}>Extra Large</CustomItem>
+            </CustomSelect>
+        </FormControl>
+    );
 }
 
 export default Select1;

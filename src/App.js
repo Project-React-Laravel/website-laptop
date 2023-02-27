@@ -5,6 +5,7 @@ import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 import DetailProduct from './pages/DetailProduct';
+import Login from './pages/Login';
 
 function App() {
   const Layout = DefaultLayout
@@ -18,6 +19,7 @@ function App() {
               <Route path='/cart' element={<Cart/>}></Route>
               <Route path='/checkout' element={<Checkout/>}></Route>
               <Route path='/detailProduct' element={<DetailProduct/>}></Route>
+              <Route path='/login' element={<Login/>}></Route>
           </Routes>
         </Layout>
         

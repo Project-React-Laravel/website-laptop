@@ -9,7 +9,7 @@ export default function BasicTabs() {
         <Tab
           label="Description"
           sx={{
-            color: "#222222",
+            color:'#222222',
             fontSize: "15px",
             fontWeight: "500",
             lineHeight: "20px",

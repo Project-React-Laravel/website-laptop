@@ -30,6 +30,14 @@ function Shop() {
         setProducts(res);
       });
   }, []);
+  //Pagination\
+  // const [page, setPage] = useState([]);
+  // const [totalPage, setTotalPage] = useState(0);
+  // const pageSize= 2;
+
+  // const Paginations = () => {
+    
+  // }
   //Gsap Animate
   gsap.registerPlugin(ScrollTrigger);
   const cardRef = useRef();
@@ -100,7 +108,7 @@ function Shop() {
           </div>
           <Box sx={{width:"100%"}} display={'flex'} justifyContent='center'>
           <Stack spacing={2}>
-            <Pagination count={10} shape="rounded" color="warning" />
+            <Pagination count={7} shape="rounded" color="warning" />
           </Stack>
           </Box>
         </div>
