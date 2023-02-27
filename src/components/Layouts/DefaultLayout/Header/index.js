@@ -86,7 +86,9 @@ function Header() {
                     </div>
                     <div>
                         <a href="/">
-                            <span><FontAwesomeIcon icon={faUser}className={cx('user')}/></span>
+                        <Link to="/login" style={{color:'#000000',textDecoration:'none'}}>
+                            <span><FontAwesomeIcon icon={faUser} className={cx('user')}/></span>
+                        </Link> 
                         </a>
                     </div>
                 </div>
