@@ -9,7 +9,7 @@ import logo from '@/pages/DetailProduct/assets';
 
 const cx = classNames.bind(styles);
 
-function Card({ name, des, price, image }) {
+function Card({ id, name, des, price, image }) {
     //Gsap Animate
     gsap.registerPlugin(ScrollTrigger);
     const cardRef = useRef();
@@ -45,7 +45,7 @@ function Card({ name, des, price, image }) {
                     <img src={logo.Star} alt={'star'} />
                     <img src={logo.Star} alt={'star'} />
                 </div>
-                <Link to="/detailProduct" className={cx('product-name')}>
+                <Link to={"/detailProduct/".concat(id)} className={cx('product-name')}>
                     {name}
                 </Link>
                 <p className={cx('product-description')}>{des}</p>

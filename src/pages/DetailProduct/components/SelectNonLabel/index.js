@@ -29,9 +29,7 @@ function Select1() {
                 }}
             >
                 <CustomItem value="">Select size</CustomItem>
-                <CustomItem value={10}>Medium</CustomItem>
-                <CustomItem value={20}>Large</CustomItem>
-                <CustomItem value={30}>Extra Large</CustomItem>
+                
             </CustomSelect>
         </FormControl>
     );
