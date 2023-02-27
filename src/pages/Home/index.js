@@ -229,6 +229,7 @@ function Home() {
           {products.map((product, index) => (
             <Selling
               key={index}
+              id={product.id}
               image={product.image_url}
               name={product.name}
               des={product.description}
@@ -268,6 +269,7 @@ function Home() {
           </div>
       </div>
     </div>
+
   );
 }
 
