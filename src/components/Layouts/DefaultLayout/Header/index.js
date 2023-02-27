@@ -1,5 +1,5 @@
 import styles from './Header.module.scss'
-
+import imggame from'../Img/game.jpg'
 import classNames from 'classnames/bind';
 import imgshop from'../Img/imgshop.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -67,20 +67,115 @@ function Header() {
                         <a href='/'>
                             <span><FontAwesomeIcon icon={faArrowRotateBack} className={cx('arrow_rotate')}/></span>
                         </a>
+                        <span className={cx('Header_full_3_1_countcard')}>1</span>
                     </div>
-                    <div>
+                    <div className={cx('Header_full_3_1')}>
                         <a href='/'>
                             <span>
                                 <FontAwesomeIcon icon={faHeart} className={cx('heart')}/>
                             </span>
                         </a>
+                        <span className={cx('Header_full_3_1_countcard')}>2</span>
                     </div>
-                    <div>
+                    <div className={cx('Header_full_3_1')}>
+                       
                         <a href='/'>
                             <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
-                        </a>
+                         </a>
+                        <span className={cx('Header_full_3_1_countcard')}>15</span>
+                       
+                       <div className={cx('Header_full_3_1_Listcard')}>
+                            <div className={cx('Header_full_3_1_Listcard_scroll')}>
+                                <ul>
+                                
+                                    <li >
+                                        <div className={cx('Header_full_3_1_Listcard_1')}>
+                                            <div className={cx('Header_full_3_1_Listcard_img')}>
+                                                <Img src={imggame}/>
+                                            </div>
+                                            <div className={cx('Header_full_3_1_Listcard_text')}>
+                                                <p>iphone 12 Pro Max 128GB Glonden</p>
+                                                <p>$ 38$</p>
+                                            </div>
+                                        </div>
+                                        <span>x</span>
+                                    </li>
+                                    <li >
+                                        <div className={cx('Header_full_3_1_Listcard_1')}>
+                                            <div className={cx('Header_full_3_1_Listcard_img')}>
+                                                <Img src={imggame}/>
+                                            </div>
+                                            <div className={cx('Header_full_3_1_Listcard_text')}>
+                                                <p>iphone 12 Pro Max 128GB Glonden</p>
+                                                <p>$ 38$</p>
+                                            </div>
+                                        </div>
+                                        <span>x</span>
+                                    </li>
+                                    <li >
+                                        <div className={cx('Header_full_3_1_Listcard_1')}>
+                                            <div className={cx('Header_full_3_1_Listcard_img')}>
+                                                <Img src={imggame}/>
+                                            </div>
+                                            <div className={cx('Header_full_3_1_Listcard_text')}>
+                                                <p>iphone 12 Pro Max 128GB Glonden</p>
+                                                <p>$ 38$</p>
+                                            </div>
+                                        </div>
+                                        <span>x</span>
+                                    </li>
+                                    <li >
+                                        <div className={cx('Header_full_3_1_Listcard_1')}>
+                                            <div className={cx('Header_full_3_1_Listcard_img')}>
+                                                <Img src={imggame}/>
+                                            </div>
+                                            <div className={cx('Header_full_3_1_Listcard_text')}>
+                                                <p>iphone 12 Pro Max 128GB Glonden</p>
+                                                <p>$ 38$</p>
+                                            </div>
+                                        </div>
+                                        <span>x</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className={cx('Header_full_3_1_Listcard_2')}>
+                                
+                            </div>
+                            <div className={cx('Header_full_3_1_Listcard_3')}>
+                                <div className={cx('Header_full_3_1_Listcard_3_first')}>
+                                    <span>Subtotal</span>
+                                    <span>$365</span>
+                                </div>
+                                <div className={cx('Header_full_3_1_Listcard_3_last')}>
+                                    <div>
+                                        <a href='/'>
+                                            <span>
+                                                View Cart
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='/'>
+                                            <span>
+                                                Checkout Now
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={cx('Header_full_3_1_Listcard_2')}>
+                                
+                                </div>
+                            <div className={cx('Header_full_3_1_Listcard_4')}>
+                                <p>
+                                    Get Return within <span>30 days</span>
+                                </p>
+                            </div>
+                       </div>
+                       
+                        
                     </div>
-                    <div>
+                    <div className={cx('Header_full_3_1')}>
                         <a href="/">
                             <span><FontAwesomeIcon icon={faUser}className={cx('user')}/></span>
                         </a>
@@ -187,7 +282,7 @@ function Header() {
                                             </div>
                                         </div>
                                         <div>
-                                        <Img src={imgshop}/>
+                                         <Img src={imgshop}/>
                                          </div>
                                     </div>
                                    
