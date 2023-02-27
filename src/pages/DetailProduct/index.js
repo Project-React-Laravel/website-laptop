@@ -11,7 +11,7 @@ import { Box, Button } from '@mui/material';
 
 const cx = classNames.bind(styles);
 
-function DetailProduct() {
+function DetailProduct({ children }) {
     const [qty, setQty] = React.useState(1);
     const increase = () => {
         setQty(qty + 1);
@@ -22,7 +22,7 @@ function DetailProduct() {
             setQty(1);
         }
     };
-    //API Product
+    //API Products
     const [products, setProducts] = React.useState([]);
     React.useEffect(() => {
         fetch('https://laptopapi.000webhostapp.com/api/laptops')
@@ -31,6 +31,15 @@ function DetailProduct() {
                 setProducts(res);
             });
     }, []);
+    //API Product
+    const [product, setProduct] = React.useState();
+    React.useEffect(() => {
+        fetch('https://laptopapi.000webhostapp.com/api/detail/'.concat(children))
+            .then((res) => res.json())
+            .then((res) => {
+                setProduct(res);
+            });
+    }, [children]);
     //Carousel
     const carousel = {
         desktop: {
@@ -51,29 +60,44 @@ function DetailProduct() {
                 <div className={cx('main-product')}>
                     <div className={cx('container-productImage')}>
                         <div className={cx('mainImage')}>
-                            <img alt={'productImage'} src={images['laptop2.png']} />
+                            <img alt={'productImage'} src={images[product === undefined ? '' : product.image_url]} />
                         </div>
                         <div className={cx('secondImage')}>
                             <div className={cx('miniImage')}>
-                                <img alt={'productImage'} src={images['laptop.png']} />
+                                <img
+                                    alt={'productImage'}
+                                    src={images[product === undefined ? '' : product.image_url]}
+                                />
                             </div>
                             <div className={cx('miniImage')}>
-                                <img alt={'productImage'} src={images['laptop.png']} />
+                                <img
+                                    alt={'productImage'}
+                                    src={images[product === undefined ? '' : product.image_url]}
+                                />
                             </div>
                             <div className={cx('miniImage')}>
-                                <img alt={'productImage'} src={images['laptop.png']} />
+                                <img
+                                    alt={'productImage'}
+                                    src={images[product === undefined ? '' : product.image_url]}
+                                />
                             </div>
                             <div className={cx('miniImage')}>
-                                <img alt={'productImage'} src={images['laptop.png']} />
+                                <img
+                                    alt={'productImage'}
+                                    src={images[product === undefined ? '' : product.image_url]}
+                                />
                             </div>
                             <div className={cx('miniImage')}>
-                                <img alt={'productImage'} src={images['laptop.png']} />
+                                <img
+                                    alt={'productImage'}
+                                    src={images[product === undefined ? '' : product.image_url]}
+                                />
                             </div>
                         </div>
                     </div>
                     <div className={cx('container-productDetail')}>
-                        <span className={cx('productCate')}>Laptop Gaming</span>
-                        <p className={cx('productName')}>Samsung Galaxy Z Fold3 5G 3 colors in 512GB</p>
+                        <span className={cx('productCate')}>{product === undefined ? '' : product.brand}</span>
+                        <p className={cx('productName')}>{product === undefined ? '' : product.name}</p>
                         <div className={cx('productVote')}>
                             <img src={logo.Star} alt="Star" />
                             <img src={logo.Star} alt="Star" />
@@ -82,12 +106,26 @@ function DetailProduct() {
                             <img src={logo.Star} alt="Star" />
                             <span>6 Reviews</span>
                         </div>
-                        <div className={cx('productPrice')}>21.000.000 VND</div>
-                        <p className={cx('productInfo')}>
-                            It is a long established fact that a reader will be distracted by the readable there content
-                            of a page when looking at its layout.
-                        </p>
-                        <div className={cx('productColor')}>
+                        <div className={cx('productPrice')}>{product === undefined ? '' : product.price} VND</div>
+                        <p className={cx('productInfo')}>{product === undefined ? '' : product.description}</p>
+                        <div className={cx('productTags')}>
+                            <p>
+                                <span>Processor :</span> {product === undefined ? '' : product.processor}
+                            </p>
+                            <p>
+                                <span>RAM :</span> {product === undefined ? '' : product.RAM} GB
+                            </p>
+                            <p>
+                                <span>Screen Size :</span> {product === undefined ? '' : product.screen_size}
+                            </p>
+                            <p>
+                                <span>Graphic Card :</span> {product === undefined ? '' : product.graphic_card}
+                            </p>
+                            <p>
+                                <span>Operating System :</span> {product === undefined ? '' : product.operating_system}
+                            </p>
+                        </div>
+                        {/* <div className={cx('productColor')}>
                             <span>COLOR</span>
                             <div>
                                 <span></span>
@@ -95,11 +133,12 @@ function DetailProduct() {
                                 <span></span>
                                 <span></span>
                             </div>
-                        </div>
-                        <div className={cx('productSize')}>
+                        </div> */}
+                        {/* <div className={cx('productSize')}>
                             <span>SIZE</span>
-                            <Select1></Select1>
-                        </div>
+                            <Select1 ></Select1>
+                        </div> */}
+                        
                         <div className={cx('productCart')}>
                             <div>
                                 <button onClick={descrease}>-</button>
@@ -130,14 +169,7 @@ function DetailProduct() {
                                 Add to cart
                             </Button>
                         </div>
-                        <div className={cx('productTags')}>
-                            <p>
-                                <span>Category :</span> Gaming
-                            </p>
-                            <p>
-                                <span>Tag :</span> Gaming, Cheap
-                            </p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
