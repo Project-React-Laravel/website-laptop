@@ -85,7 +85,7 @@ function Header() {
                         <a href='#'>
                             <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
                          </a>
-                        <span className={cx('Header_full_3_1_countcard')}>15</span>
+                        <span className={cx('Header_full_3_1_countcard')}>{cartList.length}</span>
                        
                        <div className={cx('Header_full_3_1_Listcard')}>
                             <div className={cx('Header_full_3_1_Listcard_scroll')}>
