@@ -123,7 +123,6 @@ function Home() {
         setProducts(res);
       });
   }, []);
-
   //Carousel 
   const carousel = {
     superLargeDesktop: {

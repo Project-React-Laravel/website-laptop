@@ -6,14 +6,39 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { deleteCart } from "@/redux/actions";
+import { increaseQty,decreaseQty } from "@/redux/actions";
 
 const cx = classNames.bind(styles);
 
-function ProductCart({img,name,size,price,qty1,totalPrice}) {
-  const item = {img,name,size,price};
+function ProductCart({id,img,name,size,price,qty1,totalPrice}) {
+  const item = {id,img,name,size,price,qty1,totalPrice};
   const dispath = useDispatch();
   const handleDelete = ()=>{
-    dispath(deleteCart({item}))
+    dispath(deleteCart({
+      id_product:id,
+      name:name,
+      color:'#e4bc87',
+      size:'small',
+      price:price,
+      quantity:1}))
+  }
+  const handleIncrease = ()=>{
+    dispath(increaseQty({            
+      id_product:id,
+      name:name,
+      color:'#e4bc87',
+      size:'small',
+      price:price,
+      quantity:1}))
+  }
+  const handleDecrease = ()=>{
+    dispath(decreaseQty({            
+      id_product:id,
+      name:name,
+      color:'#e4bc87',
+      size:'small',
+      price:price,
+      quantity:1}))
   }
   //Quantity And Total Product
   // const total = 38;
@@ -62,10 +87,10 @@ function ProductCart({img,name,size,price,qty1,totalPrice}) {
         <div className={cx("input-container")}>
           <div className={cx("input-sub-container")}>
             <button  className={cx("btn-qty-cart")}>
-              <FontAwesomeIcon icon={faMinus} />
+              <FontAwesomeIcon icon={faMinus} onClick={handleDecrease}/>
             </button>
             <span>{qty1}</span>
-            <button  className={cx("btn-qty-cart")}>
+            <button  className={cx("btn-qty-cart")} onClick={handleIncrease} >
               <FontAwesomeIcon icon={faPlus} />
             </button>
           </div>
