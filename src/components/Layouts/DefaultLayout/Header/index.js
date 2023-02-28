@@ -8,7 +8,6 @@ import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, fa
 import React,{useState} from 'react';
 import { cartListSelectors } from '@/redux/selectors';
 import { useSelector } from 'react-redux';
-import { color } from '@mui/system';
 
 const cx = classNames.bind(styles)
 
