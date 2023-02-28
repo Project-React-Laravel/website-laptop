@@ -11,7 +11,6 @@ import { increaseQty,decreaseQty } from "@/redux/actions";
 const cx = classNames.bind(styles);
 
 function ProductCart({id,img,name,size,price,qty1,totalPrice}) {
-  const item = {id,img,name,size,price,qty1,totalPrice};
   const dispath = useDispatch();
   const handleDelete = ()=>{
     dispath(deleteCart({

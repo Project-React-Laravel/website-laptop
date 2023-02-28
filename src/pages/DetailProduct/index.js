@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import styles from './DetailProduct.module.scss';
-import Select1 from './components/SelectNonLabel';
 import BasicTabs from './components/Tabs';
 import images from '../assets/image';
 import logo from './assets';

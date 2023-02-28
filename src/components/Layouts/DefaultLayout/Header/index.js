@@ -179,11 +179,9 @@ function Header() {
                         
                     </div>
                     <div className={cx('Header_full_3_1')}>
-                        <a href="/">
                         <Link to="/login" style={{color:'#000000',textDecoration:'none'}}>
                             <span><FontAwesomeIcon icon={faUser} className={cx('user')}/></span>
                         </Link> 
-                        </a>
                     </div>
                 </div>
             </div>
