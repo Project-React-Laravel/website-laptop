@@ -100,6 +100,7 @@ function Shop() {
             {products.map((product, index) => (
               <Card
                 key={index}
+                id={product.id}
                 name={product.name}
                 price={product.price}
                 image={product.image_url}

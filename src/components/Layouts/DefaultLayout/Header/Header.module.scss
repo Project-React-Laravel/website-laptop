@@ -135,14 +135,16 @@
     display: flex;
     line-height: 86px;
 }
-.Header_full_3 div
+.Header_full_3_1
 {
-    padding-left: 25px;
+    margin-left: 25px;
     font-size: 18px;
+    font-size: 20px;
 }
 .Header_full_3 div a span
 {
-    color: rgb(113, 113, 108);
+    color:rgb(152, 150, 146);
+    
 }
 .Header_full_bottom_1_1
 {
@@ -448,7 +450,184 @@ text-decoration: underline;}
     background: #dba440;
     
 }
+////Count Number Cart
 
+.Header_full_3_1_countcard
+{
+   
+    top: 20px;
+    position: absolute;
+    margin-left: 10px;
+    width: 19px;
+    font-size: 10px;
+    border-radius: 999px;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+    background-color:#ffbb38;
+}
+
+/////LIST CARD
+.Header_full_3_1_Listcard
+{
+    border-top: 2px solid #ffbb38;
+    top: 60px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    right: 175px;
+    width: 300px;
+    height: 584px;
+}
+.Header_full_3_1:hover .Header_full_3_1_Listcard
+{
+    display: block;
+}
+.Header_full_3_1_Listcard div ul li 
+{
+    width: 298px;
+    height: 105px;
+    display: flex;
+}
+
+.Header_full_3_1_Listcard_1
+{
+    margin: 20px 0 20px 0;
+    padding: 0 16px 0 16px;
+    display: flex;
+   
+}
+
+.Header_full_3_1_Listcard_img img
+{
+   
+    height: 65px;
+    width: 65px;
+    
+}
+.Header_full_3_1_Listcard_scroll
+{
+    
+    height: 315px;
+    overflow-y:scroll ;
+    overflow-x: hidden;
+    
+}
+::-webkit-scrollbar {
+    width: 2px;
+  }
+::-webkit-scrollbar-thumb {
+   
+    background: rgb(201, 185, 185); 
+    border-radius: 1px;
+  }
+.Header_full_3_1_Listcard_text p:first-child
+{
+    font-size: 13px;
+    
+   line-height: 22px;
+    
+}
+.Header_full_3_1_Listcard_text p:last-child
+{
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+    color: red;
+    
+}
+.Header_full_3_1_Listcard_text
+{
+    margin-left: 6px;
+    font-family: inherit;
+    font-weight: 700;
+    height: 65px;
+    
+}
+.Header_full_3_1_Listcard div ul li span
+{
+    margin: 20px 15px 0 0;
+    font-size: 13px;  
+    line-height: 15px;
+    color: #737272;
+}
+.Header_full_3_1_Listcard_2
+{
+    height: 1px;
+    border: 1px ridge ;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.Header_full_3_1_Listcard_3
+{
+
+    height: 160px;
+    padding: 0 16px 0 16px;
+    margin-bottom: 30px;
+}
+.Header_full_3_1_Listcard_3_first
+{
+    font-weight: 500;
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 28px;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+}
+.Header_full_3_1_Listcard_3_first span:last-child
+{
+    color: red;
+}
+.Header_full_3_1_Listcard_3_last
+{
+    height: 110px;
+}
+.Header_full_3_1_Listcard_3_last div a
+{
+    text-decoration: none;
+    font-size: 14px;
+}
+.Header_full_3_1_Listcard_3_last div
+{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.Header_full_3_1_Listcard_3_last div a span
+{
+    color: black;
+}
+.Header_full_3_1_Listcard_3_last div:first-child
+{
+    margin-bottom: 10px;
+    background-color:#f0ecec ;
+}
+.Header_full_3_1_Listcard_3_last div:last-child
+{
+    background-color: #ffbb38;
+}
+.Header_full_3_1_Listcard_4
+{
+   
+    font-size: 13px;
+    height: 49.5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.Header_full_3_1_Listcard_4 p
+{
+    height: 20px;
+    line-height: 4px;
+    text-align: center;
+}
+.Header_full_3_1_Listcard_4 p span 
+{
+    font-weight: 500;
+}
 
 
 

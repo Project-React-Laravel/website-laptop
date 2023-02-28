@@ -1,4 +1,5 @@
-import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
@@ -8,25 +9,38 @@ import DetailProduct from './pages/DetailProduct';
 import Login from './pages/Login';
 
 function App() {
-  const Layout = DefaultLayout
-  return (
-    <Router>
-      <div className="App">
-        <Layout>
-          <Routes>
-              <Route index element={<Home />} />
-              <Route path='/' element={<Home/>}></Route>
-              <Route path='/shop' element={<Shop/>}></Route>
-              <Route path='/cart' element={<Cart/>}></Route>
-              <Route path='/checkout' element={<Checkout/>}></Route>
-              <Route path='/detailProduct' element={<DetailProduct/>}></Route>
-              <Route path='/login' element={<Login/>}></Route>
-          </Routes>
-        </Layout>
-        
-      </div>
-    </Router>
-  );
+    const Layout = DefaultLayout;
+    //API Products
+    const [products, setProducts] = React.useState([]);
+    React.useEffect(() => {
+        fetch('https://laptopapi.000webhostapp.com/api/laptops')
+            .then((res) => res.json())
+            .then((res) => {
+                setProducts(res);
+            });
+    },[]);
+    return (
+        <Router>
+            <div className="App">
+                <Layout>
+                    <Routes>
+                        <Route path="/" element={<Home />}></Route>
+                        <Route path="/shop" element={<Shop />}></Route>
+                        <Route path="/cart" element={<Cart />}></Route>
+                        <Route path="/checkout" element={<Checkout />}></Route>
+                        {products.map((product, index) => (
+                            <Route
+                                key={product.id}
+                                path={'/detailProduct/'.concat(product.id)}
+                                element={<DetailProduct children={product.id} />}
+                            ></Route>
+                        ))}
+                        <Route path="/login" element={<Login />}></Route>
+                    </Routes>
+                </Layout>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
