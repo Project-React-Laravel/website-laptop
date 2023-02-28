@@ -8,6 +8,7 @@ import { faArrowRotateBack, faBaby, faBagShopping, faBars, faBowlFood, faBus, fa
 import React,{useState} from 'react';
 import { cartListSelectors } from '@/redux/selectors';
 import { useSelector } from 'react-redux';
+import { color } from '@mui/system';
 
 const cx = classNames.bind(styles)
 
@@ -82,9 +83,7 @@ function Header() {
                     </div>
                     <div className={cx('Header_full_3_1')}>
                        
-                        <a href='#'>
-                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
-                         </a>
+                           <Link to="/cart" ><FontAwesomeIcon icon={faCartShopping}  className={cx('bag')}/></Link>
                         <span className={cx('Header_full_3_1_countcard')}>{cartList.length}</span>
                        
                        <div className={cx('Header_full_3_1_Listcard')}>
