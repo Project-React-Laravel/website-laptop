@@ -100,14 +100,16 @@ function Cart() {
                 </TableHead>
                 <TableBody>
                   {
-                    cartList.map((product)=>
+                    cartList.map((product,index)=>
                       <ProductCart 
+                        key={index}
                         img={product.img} 
                         name={product.name}
                         size={product.size}
                         price={product.price}
                         qty1={product.quantity}
                         totalPrice={product.price*product.quantity}
+                        id={product.id_product}
                       />)
                   }
                 </TableBody>

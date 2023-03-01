@@ -13,7 +13,7 @@ function Selling({id,image,name,des,price}) {
     const dispath = useDispatch()
     const handleCart = ()=>{
         dispath(addCart({
-            id:id,
+            id_product:id,
             img:image,
             name:name,
             color:'#e4bc87',
