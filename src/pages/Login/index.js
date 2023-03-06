@@ -1,9 +1,7 @@
-import React from 'react';
 import { Box, Typography, TextField, Button, Link } from '@mui/material';
-// import classNames from 'classnames/bind';
-// import styles from './Login.module.scss';
 
 function Login() {
+
     return (
         <Box
             display={'flex'}
@@ -20,7 +18,7 @@ function Login() {
                     height: '500px',
                     padding: '50px',
                     borderRadius: '10px',
-                    border: '1px solid #ccc'
+                    border: '1px solid #ccc',
                 }}
             >
                 <Typography variant="h2" color="#ffbb38" sx={{ margin: '0px auto' }}>
@@ -30,15 +28,20 @@ function Login() {
                     required
                     id="outlined-required"
                     label="Acccount"
-                    color='warning'
+                    color="warning"
                     spellCheck={false}
+                    type="email"
+                    name="email"
+                  
                 />
                 <TextField
                     id="outlined-password-input"
                     label="Password"
                     type="password"
                     autoComplete="current-password"
-                    color='warning'
+                    color="warning"
+                    name="password"
+                   
                 />
                 <Box display={'flex'} justifyContent={'space-between'}>
                     <Link href="/login" sx={{ textDecoration: 'none', color: '#222222' }}>

@@ -6,15 +6,16 @@ function Button1({ ten }) {
   return (
     <Button
       ref={BtnRef}
-      variant="outlined"
       sx={{
+        border: '1px solid #ccc',
         width: "50px",
         fontWeight: 300,
         margin: "3px",
-        "&:hover": {
-          backgroundColor: "#1976d2",
-          color: "#fff",
-        },
+        color:"#797979",
+        "&:active":{
+          backgroundColor: "#ffbf44",
+          color: "#000"
+        }
       }}
     >
       {ten}

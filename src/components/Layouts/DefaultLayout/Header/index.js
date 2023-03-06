@@ -82,10 +82,8 @@ function Header() {
                     </div>
                     <div className={cx('Header_full_3_1')}>
                        
-                        <a href='#'>
-                            <span><FontAwesomeIcon icon={faCartShopping} className={cx('bag')}/></span>
-                         </a>
-                        <span className={cx('Header_full_3_1_countcard')}>15</span>
+                           <Link to="/cart" ><FontAwesomeIcon icon={faCartShopping}  className={cx('bag')}/></Link>
+                        <span className={cx('Header_full_3_1_countcard')}>{cartList.length}</span>
                        
                        <div className={cx('Header_full_3_1_Listcard')}>
                             <div className={cx('Header_full_3_1_Listcard_scroll')}>
@@ -179,11 +177,9 @@ function Header() {
                         
                     </div>
                     <div className={cx('Header_full_3_1')}>
-                        <a href="/">
                         <Link to="/login" style={{color:'#000000',textDecoration:'none'}}>
                             <span><FontAwesomeIcon icon={faUser} className={cx('user')}/></span>
                         </Link> 
-                        </a>
                     </div>
                 </div>
             </div>
