@@ -1,0 +1,86 @@
+.Main_nav
+{
+    width: 260px;
+    height: 120px;
+    
+}
+.Main
+{
+    background-color: white;
+    width: 260px;
+}
+.Main_nav img
+{
+    
+    height: 120px;
+    width: 260px;
+}
+.Main_nav_home
+{
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 40px;
+    color:rgb(118, 116, 116) ;
+}
+.Main_nav_home h1
+{
+    font-size: 15px;
+}
+.Main_nav_controller
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.Main_nav_controller div:first-child svg
+{
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(146, 144, 144);
+}
+.Main_nav_controller div:last-child svg
+{
+    cursor: pointer;
+    color: rgb(146, 144, 144);
+}
+.Main_nav_controller2
+{
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(128, 125, 125);
+}
+.Main_nav_nav{
+    
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.05s;
+}
+.Main_nav_nav ul
+{
+  
+    list-style: none;
+    
+}
+.Main_nav_nav li
+{
+    color: rgb(128, 125, 125);
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.Main_nav_nav li a
+{
+    text-decoration: none;
+    color: rgb(128, 125, 125);  
+}
+.Main_nav_nav.open
+{
+    
+    height: 250px;
+}

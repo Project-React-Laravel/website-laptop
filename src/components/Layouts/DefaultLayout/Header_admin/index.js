@@ -44,8 +44,8 @@ function Header_admin()
                 <div>
                     <button><FontAwesomeIcon icon={faEnvelope}/></button>
                 </div>
-                <div>
-                    <button> <Img src={imgadmin}/></button>
+                <div className={cx("Main4_img")}>
+                    <button> <Img  src={imgadmin}/></button>
                 </div>
             </div>
         </div>

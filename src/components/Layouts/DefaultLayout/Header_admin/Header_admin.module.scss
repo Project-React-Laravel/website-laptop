@@ -5,7 +5,7 @@
     width: 100%;
     background-color: 
     #1e88e5;
-    height: 51px;
+    height: 60px;
 }
 .Main3 ul 
 {
@@ -15,7 +15,99 @@
 .Main4
 {
     display: flex;
+    width: 200px ;
+    justify-content: space-between;
 }
+.Main4 div
+{
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    
+}
+.Main4 div button svg
+{
+    font-size: 18px
+    
+}
+.Main4 div button 
+{
+    background-color: #1e88e5;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+.Main1
+{
+    width: 245px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+
+}
+.Main1 a
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.Main1 a span
+{
+    font-weight:100;
+}
+.Main2
+{
+    height: 60px;
+    width: 50px;
+    font-size: 17px;
+    line-height: 60px;
+    text-align: center;
+    
+}
+.Main2 a
+{
+    color: white;
+}
+.Main3
+{
+    width: 110px;
+    margin-right: 928px
+}
+.Main3 ul li
+{
+    width: 60px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    
+}
+.Main3 ul li a
+{
+    text-decoration: none;
+    color: rgb(211, 206, 206);
+
+}
+.Main3 ul li button svg
+{
+    cursor: pointer;
+    font-size: 17px;
+}
+.Main4_img button img
+{
+    margin-top: 15px;
+    width: 30px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.Main4_img button
+{
+    
+    border-radius: 999px;
+}
+
+
 
 
 
