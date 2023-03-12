@@ -229,14 +229,7 @@ function Header() {
                                     <Link to="/" style={{color:'#000000',textDecoration:'none'}}>Home</Link>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
-                                <div className={cx('Header_full_bottom_show_home')}>
-                                    <div>
-                                        <ul>
-                                            <li><a href='/shop'>Home One</a></li>
-                                            <li><a href='/shop'>Home Two</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                
                             </li>
                             <li className={cx('Header_show_control3')}>
                                 <span>
