@@ -1,14 +1,11 @@
 import { Box, Typography, Breadcrumbs, Link, TextField, Button } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import { Label } from '@mui/icons-material';
 
 function Admin() {
     return (
-        <Box
-            display={'flex'}
-            justifyContent="center"
-            sx={{ width: '100%', height: '900px', backgroundColor: '#f8f8f8', p: 10 }}
-        >
-            <Box sx={{ width: '1170px', height: '600px' }}>
+        <Box display={'flex'} justifyContent="center" sx={{height: '900px', backgroundColor: '#f8f8f8',flex:'1' }}>
+            <Box display={'flex'} flexDirection={'column'} justifyContent="space-around" sx={{ width: '1170px', height: '600px' }}>
                 <Breadcrumbs aria-label="breadcrumb" style={{ fontSize: '17px', m: 10 }}>
                     <Link
                         underline="hover"
@@ -51,7 +48,7 @@ function Admin() {
                     <TextField variant="outlined" label="Graphic Card" fullWidth></TextField>
                     <TextField variant="outlined" label="Processor" fullWidth></TextField>
                     <TextField variant="outlined" label="New" fullWidth></TextField>
-                    <Box style={{position:'relative',width:'100%',height:'50px'}}>
+                    <Box style={{ position: 'relative', width: '100%', height: '50px' }}>
                         <Button
                             variant="contained"
                             size="medium"
