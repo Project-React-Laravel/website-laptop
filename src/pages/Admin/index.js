@@ -1,6 +1,5 @@
 import { Box, Typography, Breadcrumbs, Link, TextField, Button } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-import { Label } from '@mui/icons-material';
 
 function Admin() {
     return (

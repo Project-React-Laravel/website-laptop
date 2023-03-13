@@ -499,7 +499,7 @@ text-decoration: underline;}
     margin: 20px 0 20px 0;
     padding: 0 16px 0 16px;
     display: flex;
-   
+    width: 320px;
 }
 
 .Header_full_3_1_Listcard_img img
@@ -546,7 +546,6 @@ text-decoration: underline;}
     font-family: inherit;
     font-weight: 700;
     height: 65px;
-    
 }
 .Header_full_3_1_Listcard div ul li span
 {
@@ -593,6 +592,8 @@ text-decoration: underline;}
 {
     text-decoration: none;
     font-size: 14px;
+    color: #3f3f3f;
+    font-weight: 500;
 }
 .Header_full_3_1_Listcard_3_last div
 {

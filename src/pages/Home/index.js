@@ -252,7 +252,8 @@ function Home() {
           <Carousel responsive={carousel} 
                     draggable
                     infinite
-                    autoPlaySpeed={1000}
+                    autoPlay={true}
+                    autoPlaySpeed={2500}
                     centerMode={false}
                     >
             {products.map((product) => (

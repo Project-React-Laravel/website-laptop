@@ -9,18 +9,18 @@ function Img({src})
     
     return <img src={src} alt="Logo"></img>
 }
-function Header_admin()
+function HeaderAdmin()
 {
     
     return(
         <div className={cx("Main")}>
             <div className={cx("Main1")}>
-                <a href='#'>
+                <a href='/'>
                     DARK NIGHT <span>PRO</span>
                 </a>
             </div>
             <div className={cx("Main2")}>
-                <a href='#'>
+                <a href='/'>
                    <FontAwesomeIcon icon={faBars}/>
                 </a>
             </div>
@@ -32,7 +32,7 @@ function Header_admin()
                         </button>
                     </li>
                     <li>
-                        <a href='#'>About</a>
+                        <a href='/'>About</a>
                     </li>
                 </ul>
             </div>
@@ -53,4 +53,4 @@ function Header_admin()
 }
 
 
-export default Header_admin
+export default HeaderAdmin

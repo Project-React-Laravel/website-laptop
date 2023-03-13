@@ -4,13 +4,15 @@ import Nav from './nav.js';
 import img from '../Img/admin2.jpg';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faComment, faHippo, faHouse, faNoteSticky, faPen } from '@fortawesome/free-solid-svg-icons';
-const cx = classNames.bind(styles);
-function Img({ src }) {
-    return <img src={src} alt="Logo"></img>;
+import { faChevronDown, faHouse, faNoteSticky, faPen } from '@fortawesome/free-solid-svg-icons';
+const cx = classNames.bind(styles)
+function Img({src})
+{
+    return <img src={src} alt="Logo"></img>
 }
 
-function Header_nav({ content }) {
+function HeaderNav({content})
+{
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [iscolor, setcolor] = useState(false);
 
@@ -24,7 +26,6 @@ function Header_nav({ content }) {
                     } else {
                         setcolor(false);
                     }
-
                     if (isMenuOpen === true) {
                         setIsMenuOpen(false);
                     } else setIsMenuOpen(true);
@@ -70,4 +71,4 @@ function Header_nav({ content }) {
         </div>
     );
 }
-export default Header_nav;
+export default HeaderNav;

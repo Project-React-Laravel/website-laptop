@@ -59,6 +59,13 @@ const rootReducer = (state = initState,action) => {
                     quantity: newCart2[objIndex2].quantity - 1
                 };  
             }
+           if(newCart2[objIndex2].quantity <= 0)
+           {
+            newCart2[objIndex2] = {
+                ...newCart2[objIndex2],
+                quantity: 1
+            };  
+           }
             return {cartArr: newCart2};
         default:
             return state;
