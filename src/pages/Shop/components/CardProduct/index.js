@@ -6,10 +6,35 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '@/pages/DetailProduct/assets';
+import { useDispatch } from 'react-redux';
+import { addCart } from '@/redux/actions';
+import {  useSnackbar } from 'notistack';
 
 const cx = classNames.bind(styles);
 
 function Card({ id, name, des, price, image }) {
+    //Cart
+    const dispath = useDispatch()
+    const handleCart = ()=>{
+        dispath(addCart({
+            id_product:id,
+            img:image,
+            name:name,
+            color:'#e4bc87',
+            size:'small',
+            price:price,
+            quantity:1
+        }))
+    }
+    const { enqueueSnackbar } = useSnackbar();
+    const handleClickVariant = (variant) =>  {
+        // variant could be success, error, warning, info, or default
+        enqueueSnackbar('Thêm vào giỏ hàng thành công', { variant });
+      };
+    const onClickFun = ()=>{
+        handleClickVariant('success');
+        handleCart();
+    }
     //Gsap Animate
     gsap.registerPlugin(ScrollTrigger);
     const cardRef = useRef();
@@ -50,7 +75,7 @@ function Card({ id, name, des, price, image }) {
                 </Link>
                 <p className={cx('product-description')}>{des}</p>
                 <p className={cx('product-price')}>{(price * 23000).toLocaleString('vi-VN')} VND</p>
-                <button className={cx('add-to-cart')}>Add to cart</button>
+                <button onClick={onClickFun} className={cx('add-to-cart')}>Add to cart</button>
             </div>
             <div className={cx('product-access')}>
                 <Link to="/detailProduct" className={cx('')}>

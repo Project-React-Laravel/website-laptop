@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
+import Admin from './pages/Admin';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 import DetailProduct from './pages/DetailProduct';
 import Login from './pages/Login';
@@ -79,7 +80,7 @@ function App() {
                         path="/admin"
                         element={
                             <Layout admin>
-                                {/* <Admin /> */}
+                                <Admin />
                             </Layout>
                         }
                     ></Route>

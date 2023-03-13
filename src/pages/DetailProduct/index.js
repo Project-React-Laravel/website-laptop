@@ -7,6 +7,9 @@ import React from 'react';
 import Card from '../Shop/components/CardProduct';
 import Carousel from 'react-multi-carousel';
 import { Box, Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { addCart } from '@/redux/actions';
+import {  useSnackbar } from 'notistack';
 
 const cx = classNames.bind(styles);
 
@@ -21,6 +24,28 @@ function DetailProduct({ children }) {
             setQty(1);
         }
     };
+    //Cart
+    const dispath = useDispatch()
+    const handleCart = ()=>{
+        dispath(addCart({
+            id_product:product.id,
+            img:product.image_url,
+            name:product.name,
+            color:'#e4bc87',
+            size:'small',
+            price:product.price,
+            quantity:qty
+        }))
+    }
+    const { enqueueSnackbar } = useSnackbar();
+    const handleClickVariant = (variant) =>  {
+        // variant could be success, error, warning, info, or default
+        enqueueSnackbar('Thêm vào giỏ hàng thành công', { variant });
+      };
+    const onClickFun = ()=>{
+        handleClickVariant('success');
+        handleCart();
+    }
     //API Products
     const [products, setProducts] = React.useState([]);
     React.useEffect(() => {
@@ -148,6 +173,7 @@ function DetailProduct({ children }) {
                                 <img src={logo.Heart} alt="Heart" />
                             </div>
                             <Button
+                                onClick={onClickFun}
                                 style={{
                                     borderRadius: 0,
                                     backgroundColor: '#222222',

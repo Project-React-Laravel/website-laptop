@@ -9,7 +9,7 @@ import * as React from "react";
 const cx = classNames.bind(styles);
 
 function FilterGroup({ children, label, type }) {
-  const minDistance = 100000;
+  const minDistance = 10000000;
   const [value2, setValue2] = React.useState([10000000, 50000000]);
 
   const handleChange2 = (event, newValue, activeThumb) => {
@@ -29,6 +29,17 @@ function FilterGroup({ children, label, type }) {
       setValue2(newValue);
     }
   };
+  //Check
+  const [sizes, setSizes] = React.useState([]);
+  const handleCheckbox = (event) => {
+    setSizes((prev) => 
+      prev.includes(event.target.value)?
+        prev.filter((value) => value!==event.target.value)
+      :
+        [...prev, event.target.value]
+    )
+  }
+  console.log(sizes);
   //Checkbox
   if (type === "CheckBox") {
     return (
@@ -40,7 +51,7 @@ function FilterGroup({ children, label, type }) {
               return (
                 <FormControlLabel
                   key={index}
-                  control={<Checkbox color="default" size="big" />}
+                  control={<Checkbox color="default" size="big" onChange={handleCheckbox} value={item} />}
                   label={<span style={{ fontSize: "12px" }}>{item}</span>}
                 />
               );

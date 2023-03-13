@@ -10,8 +10,8 @@ function DefaultLayout({ children,admin }) {
         return (
             <div className={cx('wrapper')}>
                 <Header />
-                {/* <div className={cx('container')}>{children}</div>
-                <Footer /> */}
+                <div className={cx('container')}>{children}</div>
+                {/* <Footer /> */}
             </div>
         );
     }else{
