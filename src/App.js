@@ -10,6 +10,7 @@ import Login from './pages/Login';
 
 function App() {
     const Layout = DefaultLayout;
+
     //API Products
     const [products, setProducts] = React.useState([]);
     React.useEffect(() => {
@@ -18,26 +19,71 @@ function App() {
             .then((res) => {
                 setProducts(res);
             });
-    },[]);
+    }, []);
     return (
         <Router>
             <div className="App">
-                <Layout>
-                    <Routes>
-                        <Route path="/" element={<Home />}></Route>
-                        <Route path="/shop" element={<Shop />}></Route>
-                        <Route path="/cart" element={<Cart />}></Route>
-                        <Route path="/checkout" element={<Checkout />}></Route>
-                        {products.map((product, index) => (
-                            <Route
-                                key={product.id}
-                                path={'/detailProduct/'.concat(product.id)}
-                                element={<DetailProduct children={product.id} />}
-                            ></Route>
-                        ))}
-                        <Route path="/login" element={<Login />}></Route>
-                    </Routes>
-                </Layout>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <Layout>
+                                <Home />
+                            </Layout>
+                        }
+                    ></Route>
+                    <Route
+                        path="/shop"
+                        element={
+                            <Layout>
+                                <Shop />
+                            </Layout>
+                        }
+                    ></Route>
+                    <Route
+                        path="/cart"
+                        element={
+                            <Layout>
+                                <Cart />
+                            </Layout>
+                        }
+                    ></Route>
+                    <Route
+                        path="/checkout"
+                        element={
+                            <Layout>
+                                <Checkout />
+                            </Layout>
+                        }
+                    ></Route>
+                    {products.map((product, index) => (
+                        <Route
+                            key={product.id}
+                            path={'/detailProduct/'.concat(product.id)}
+                            element={
+                                <Layout>
+                                    <DetailProduct children={product.id} />
+                                </Layout>
+                            }
+                        ></Route>
+                    ))}
+                    <Route
+                        path="/login"
+                        element={
+                            <Layout>
+                                <Login />
+                            </Layout>
+                        }
+                    ></Route>
+                    <Route
+                        path="/admin"
+                        element={
+                            <Layout admin>
+                                {/* <Admin /> */}
+                            </Layout>
+                        }
+                    ></Route>
+                </Routes>
             </div>
         </Router>
     );

@@ -40,7 +40,7 @@ function FilterGroup({ children, label, type }) {
               return (
                 <FormControlLabel
                   key={index}
-                  control={<Checkbox defaultChecked size="big" />}
+                  control={<Checkbox color="default" size="big" />}
                   label={<span style={{ fontSize: "12px" }}>{item}</span>}
                 />
               );
