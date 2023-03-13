@@ -6,11 +6,11 @@ function nav({isOpen} )
     return(
         <div className={cx("Main_nav_nav",isOpen ? "open" : ""   )}>
         <ul>
-            <li><a href='#'>Dashboards1</a></li>
-            <li><a href='#'>Dashboards1</a></li>
-            <li><a href='#'>Dashboards1</a></li>
-            <li><a href='#'>Dashboards1</a></li>
-            <li><a href='#'>Dashboards1</a></li>
+            <li><a href='/'>Dashboards1</a></li>
+            <li><a href='/'>Dashboards1</a></li>
+            <li><a href='/'>Dashboards1</a></li>
+            <li><a href='/'>Dashboards1</a></li>
+            <li><a href='/'>Dashboards1</a></li>
             
         </ul>
     </div>

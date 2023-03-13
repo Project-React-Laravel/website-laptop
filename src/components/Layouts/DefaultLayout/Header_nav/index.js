@@ -8,7 +8,6 @@ import { faChevronDown, faComment, faHippo, faHouse, faNoteSticky, faPen } from 
 const cx = classNames.bind(styles)
 function Img({src})
 {
-    
     return <img src={src} alt="Logo"></img>
 }
 
