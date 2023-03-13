@@ -240,12 +240,11 @@ function Checkout() {
                     </ul>
                   </div>
 
-                  <a className={cx("header-form-contact-order-main-8-a")}  href="">
+                  <button className={cx("header-form-contact-order-main-8-a")}>
                     <div className={cx("header-form-contact-order-main-8")}>
                       <span >Place Order Now</span>
                     </div>
-                  </a>
-
+                  </button>
                 </div>
               </div>
             </div>

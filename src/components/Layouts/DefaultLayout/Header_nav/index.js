@@ -5,7 +5,6 @@ import img from '../Img/admin2.jpg'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faComment, faHippo, faHouse, faNoteSticky, faPen } from '@fortawesome/free-solid-svg-icons';
-import { borderRadius } from '@mui/system';
 const cx = classNames.bind(styles)
 function Img({src})
 {
@@ -13,7 +12,7 @@ function Img({src})
     return <img src={src} alt="Logo"></img>
 }
 
-function Header_nav()
+function HeaderNav()
 {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [iscolor,setcolor]=useState(false)
@@ -78,4 +77,4 @@ function Header_nav()
     )
     
 }
-export default Header_nav;
+export default HeaderNav;

@@ -148,18 +148,14 @@ function Header() {
                                 </div>
                                 <div className={cx('Header_full_3_1_Listcard_3_last')}>
                                     <div>
-                                        <a>
                                             <span>
                                                 <Link to="/cart">View Cart</Link>
                                             </span>
-                                        </a>
                                     </div>
                                     <div>
-                                        <a>
                                             <span>
                                                 <Link to="/checkout">Checkout Now</Link>
                                             </span>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -241,11 +237,11 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>Shop LIST</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/shop'>Shop Sidebar</a></li>
-                                                    <li><a href='/shop'>Shop Fullwidth</a></li>
-                                                    <li><a href='/shop'>Shop Category Icon</a></li>
-                                                    <li><a href='/shop'>Shop Category Icon</a></li>
-                                                    <li><a href='/shop'>Shop List View</a></li>
+                                                    <li><Link to="/shop">Shop Sidebar</Link></li>
+                                                    <li><Link to="/shop">Shop Fullwidth</Link></li>
+                                                    <li><Link to="/shop">Shop Category Icon</Link></li>
+                                                    <li><Link to="/shop">Shop Category Icon</Link></li>
+                                                    <li><Link to="/shop">Shop List View</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -253,10 +249,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>PRODUCT LAYOUTS</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/shop'>Horizonral Thumbnail</a></li>
-                                                    <li><a href='/shop'>Vertical Thumbnail</a></li>
-                                                    <li><a href='/shop'>Gallery Thumbnail</a></li>
-                                                    <li><a href='/shop'>Sticky Summary</a></li>
+                                                    <li><Link to="/shop">Horizonral Thumbnail</Link></li>
+                                                    <li><Link to="/shop">Vertical Thumbnail</Link></li>
+                                                    <li><Link to="/shop">Gallery Thumbnail</Link></li>
+                                                    <li><Link to="/shop">Sticky Summary</Link></li>
                               
                                                 </ul>
                                             </div>
@@ -266,10 +262,10 @@ function Header() {
                                             <div className={cx('Header_full_bottom_show_shop_main_h1')}><h1>POLULAR CATEGORY</h1></div>
                                             <div className={cx('Header_full_bottom_show_shop_1')}>
                                                 <ul>
-                                                    <li><a href='/shop'>Phone & Tablet</a></li>
-                                                    <li><a href='/shop'>Gaming & Sports</a></li>
-                                                    <li><a href='/shop'>Home Appliance</a></li>
-                                                    <li><a href='/shop'>Fashion Clothes</a></li>
+                                                    <li><Link to="/shop">Phone & Tablet</Link></li>
+                                                    <li><Link to="/shop">Gaming & Sports</Link></li>
+                                                    <li><Link to="/shop">Home Appliance</Link></li>
+                                                    <li><Link to="/shop">Fashion Clothes</Link></li>
                                                     
                                                 </ul>
                                             </div>
@@ -283,7 +279,7 @@ function Header() {
                             </li>
                             <li className={cx('Header_show_control2')}>
                                 <span>
-                                    <span>Pages</span>
+                                    <span><Link to="/" style={{textDecoration:"none",color:"black"}}>Pages</Link></span>
                                     <span> <FontAwesomeIcon icon={faChevronDown} className={cx('arrow_down')}/></span>
                                 </span>
                                 <div className={cx('Header_full_bottom_show_page')}>
@@ -300,19 +296,19 @@ function Header() {
                             </li>
                             <li>
                                 <span>
-                                    <span>About</span>
+                                    <span><Link to="/" style={{textDecoration:"none",color:"black"}}>About</Link></span>
                                    
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    <span>Blog</span>
+                                    <span><Link to="/" style={{textDecoration:"none",color:"black"}}>Blog</Link></span>
                                     
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    <span>Context</span>
+                                    <span><Link to="/" style={{textDecoration:"none",color:"black"}}>Context</Link></span>
                                     
                                 </span>
                             </li>
