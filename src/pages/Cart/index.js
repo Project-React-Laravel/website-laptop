@@ -13,7 +13,7 @@ import {
 import ProductCart from "./ProductCart";
 import TextField from "@mui/material/TextField";
 import Button from "./Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { cartListSelectors } from "@/redux/selectors";
 import React from 'react';
@@ -60,6 +60,15 @@ const shippings = [
 function Cart() {
   const cartList = useSelector(cartListSelectors);
   const [checked, setChecked] = useState();
+  const [subtotal , setSubtotal] = useState(0);
+  const getSubTotal = (cartList)=>{
+    return cartList.reduce((total,product)=>{
+      return total + parseFloat(product.price * product.quantity)
+    },0)
+  }
+  useEffect(()=>{
+    setSubtotal(getSubTotal(cartList))
+  },[cartList])
   return (
     <div>
       <div className={cx("wrapper")}>
@@ -151,7 +160,7 @@ function Cart() {
                 {/* Subtotal */}
                 <div className={cx("subtotal")}>
                   <p>Subtotal</p>
-                  <p style={{ color: "#ef262c" }}>$365</p>
+                  <p style={{ color: "#ef262c" }}>${subtotal}</p>
                 </div>
                 {/* Shipping */}
                 <div className={cx("shipping")}>

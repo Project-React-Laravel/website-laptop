@@ -1,12 +1,39 @@
 import styles from "./Checkout.module.scss";
 import classNames from "classnames/bind";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 
 const cx = classNames.bind(styles);
 
 function Checkout() {
+  const [customer, setCustomer] = useState({
+    customer_name: '',
+    email: '',
+    phone: '',
+  });
+  const handleChange = (e) => {
+    setCustomer({
+      ...customer,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleCheckout = (e)=>{
+    e.preventDefault();
+    axios.post('http://127.0.0.1:8000/api/checkout',customer,{
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(data=>{
+      console.log(data.data);
+    })
+    .catch(error => {
+      console.error(error);;
+    });
+  }
   return (
     <div className={cx("wrapper")}>
       <div className={cx("wrapper")}>
@@ -39,7 +66,7 @@ function Checkout() {
               <div className={cx("form")}>
                 <h1 className={cx("header-form-1")}>Billing Details</h1>
                 <div className={cx("header-form-contact")}>
-                  <form  method="#">
+                  <form onSubmit={handleCheckout}>
                     <div className={cx("header-form-contact-info")}>
                       <div  className={cx("header-form-contact-info-1")}>
                         <label>First Name *</label><br></br>
@@ -47,17 +74,17 @@ function Checkout() {
                       </div>
                       <div  className={cx("header-form-contact-info-1")}>
                         <label>Last Name *</label><br></br>
-                        <input placeholder="Demo Name"></input>
+                        <input placeholder="Demo Name" name="customer_name" value={customer.name} onChange={handleChange}></input>
                       </div>
                     </div>
                     <div className={cx("header-form-contact-info")}>
                       <div  className={cx("header-form-contact-info-1")}>
                         <label>Email Address *</label><br></br>
-                        <input type='email' placeholder="Vd:...@gmail.com"></input>
+                        <input type='email' placeholder="Vd:...@gmail.com" name="email" value={customer.email} onChange={handleChange}></input>
                       </div>
                       <div  className={cx("header-form-contact-info-1")}>
                         <label>Phone Number *</label><br></br>
-                        <input placeholder="0123...."></input>
+                        <input placeholder="0123...." name="phone" value={customer.phone} onChange={handleChange}></input>
                       </div>
                     </div>
 
@@ -105,6 +132,7 @@ function Checkout() {
                         <label >Ship to a different address</label>
                     </div>
                     </div>
+                    <button type="submit">check</button>
                   </form>
                 </div>
               </div>
@@ -212,9 +240,9 @@ function Checkout() {
                     </ul>
                   </div>
 
-                  <a className={cx("header-form-contact-order-main-8-a")}  href="/">
+                  <a className={cx("header-form-contact-order-main-8-a")}  href="">
                     <div className={cx("header-form-contact-order-main-8")}>
-                      <span>Place Order Now</span>
+                      <span >Place Order Now</span>
                     </div>
                   </a>
 
