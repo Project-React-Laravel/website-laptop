@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
+import CheckoutSuccess from './pages/CheckoutSuccess';
 import DefaultLayout from './components/Layouts/DefaultLayout';
 import DetailProduct from './pages/DetailProduct';
 import Login from './pages/Login';
@@ -45,6 +46,14 @@ function App() {
                         element={
                             <Layout>
                                 <Cart />
+                            </Layout>
+                        }
+                    ></Route>
+                    <Route
+                        path="/checkoutSuccess"
+                        element={
+                            <Layout>
+                                <CheckoutSuccess />
                             </Layout>
                         }
                     ></Route>

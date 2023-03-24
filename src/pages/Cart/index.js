@@ -16,7 +16,9 @@ import Button from "./Button";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { cartListSelectors } from "@/redux/selectors";
+import { Link } from 'react-router-dom';
 import React from 'react';
+
 
 const cx = classNames.bind(styles);
 const locations = [
@@ -61,6 +63,7 @@ function Cart() {
   const cartList = useSelector(cartListSelectors);
   const [checked, setChecked] = useState();
   const [subtotal , setSubtotal] = useState(0);
+  localStorage.setItem("cartList",JSON.stringify(cartList))
   const getSubTotal = (cartList)=>{
     return cartList.reduce((total,product)=>{
       return total + parseFloat(product.price * product.quantity)
@@ -146,7 +149,9 @@ function Cart() {
             </div>
             <div className={cx("discount-code")}>
               <div className={cx("btn-group-continute")}>
-                <Button title={"Continute Shopping"} />
+                <Link to="/">
+                  <Button title={"Continute Shopping"} />
+                </Link>
                 <Button title={"Update Cart."} />
               </div>
             </div>
@@ -221,7 +226,9 @@ function Cart() {
                   <p style={{ color: "#ef262c" }}>$365</p>
                 </div>
                 <div className={cx()}>
+                  <Link to="/checkout">
                   <Button title={"Proceed to Checkout"} />
+                  </Link>
                 </div>
               </div>
             </div>

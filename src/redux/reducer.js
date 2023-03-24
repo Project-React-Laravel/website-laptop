@@ -19,7 +19,7 @@ const rootReducer = (state = initState,action) => {
             } else{
                 let newCart = state.cartArr;
                 const objIdex = newCart.findIndex(
-                    (obj)=> obj.id_product = action.payload.id_product
+                    (obj)=> obj.id_product === action.payload.id_product
                 );
                 if(newCart[objIdex].quantity === 1){
                     newCart[objIdex].quantity = 2;
@@ -51,7 +51,7 @@ const rootReducer = (state = initState,action) => {
         case 'cart/decreaseQty':
             const newCart2 = [...state.cartArr];
             const objIndex2 = newCart2.findIndex(
-                    (obj)=> obj.id_product = action.payload.id_product
+                    (obj)=> obj.id_product === action.payload.id_product
             );
             if (objIndex2 >= 0) {
                 newCart2[objIndex2] = {
