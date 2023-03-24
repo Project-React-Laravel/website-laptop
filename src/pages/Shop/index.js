@@ -57,7 +57,13 @@ function Shop() {
       }
     );
   }, []);
+  //Filter
+  const rangeRef = useRef()
+  const checkboxRef = useRef()
 
+  useEffect(() => {
+    console.log(1);
+  },[checkboxRef,rangeRef]);
   return (
     <div className={cx("wrapper")}>
       <div className={cx("breadcrumb")}>Home</div>
@@ -69,6 +75,7 @@ function Shop() {
             type="CheckBox"
           ></FilterGroup>
           <FilterGroup
+            ref={checkboxRef}
             children={"Kích cỡ màn hình"}
             label={size}
             type="CheckBox"
@@ -78,7 +85,7 @@ function Shop() {
             label={["HD", "FullHD", "Retina", "2K", "4K", "8K"]}
             type="Button"
           ></FilterGroup>
-          <FilterGroup children={"Giá"} type="Range"></FilterGroup>
+          <FilterGroup ref={rangeRef} children={"Giá"} type="Range"></FilterGroup>
         </div>
         <div className={cx("list")}>
           <div className={cx("product-sorting")}>

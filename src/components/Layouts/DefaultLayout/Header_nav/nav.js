@@ -11,7 +11,6 @@ function nav({isOpen} )
             <li><a href='/'>Dashboards1</a></li>
             <li><a href='/'>Dashboards1</a></li>
             <li><a href='/'>Dashboards1</a></li>
-            
         </ul>
     </div>
     );

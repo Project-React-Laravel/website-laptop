@@ -2,16 +2,15 @@
 {
     width: 260px;
     height: 120px;
-    
 }
 .Main
 {
     background-color: white;
-    width: 260px;
+    width: 100%;
+    display: flex;  
 }
 .Main_nav img
 {
-    
     height: 120px;
     width: 260px;
 }
@@ -63,7 +62,6 @@
 {
   
     list-style: none;
-    
 }
 .Main_nav_nav li
 {
@@ -81,6 +79,5 @@
 }
 .Main_nav_nav.open
 {
-    
     height: 250px;
 }

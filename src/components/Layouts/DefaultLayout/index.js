@@ -7,19 +7,19 @@ import Footer from './Footer';
 
 const cx = classNames.bind(styles);
 
-function DefaultLayout({ children,admin }) {
-    if(admin){
+function DefaultLayout({ children, admin }) {
+    if (admin) {
         return (
             <div className={cx('wrapper')}>
                 <HeaderAdmin />
                 <div className={cx('container')}>
-                    <HeaderNav/>
-                    {children}       
+                    <HeaderNav content={children}/>
+                           
                     </div>
                 <Footer />
             </div>
         );
-    }else{
+    } else {
         return (
             <div className={cx('wrapper')}>
                 <Header />
